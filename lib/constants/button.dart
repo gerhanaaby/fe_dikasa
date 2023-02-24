@@ -55,28 +55,28 @@ Widget textButtonApp(
   if (disabledTextColorx == null && disabledColorx == null) {
     disabledTextColorx = colorx;
   }
-  if (textColorx == null) {
-    textColorx = colorx;
-  }
-  return TextButton(
-      key: keyx,
-      style: ButtonStyle(
-        foregroundColor: MaterialStateProperty.resolveWith<Color>(
-          // text color
-              (Set<MaterialState> states) => states.contains(MaterialState.disabled)
-              ? disabledTextColorx
-              : textColorx,
+  textColorx ??= colorx;
+  return SizedBox(
+    child: TextButton(
+        key: keyx,
+        style: ButtonStyle(
+          foregroundColor: MaterialStateProperty.resolveWith<Color>(
+            // text color
+                (Set<MaterialState> states) => states.contains(MaterialState.disabled)
+                ? disabledTextColorx
+                : textColorx,
+          ),
+          backgroundColor: MaterialStateProperty.resolveWith<Color>(
+            // background color    this is color:
+                (Set<MaterialState> states) =>
+            states.contains(MaterialState.disabled) ? disabledColorx : colorx,
+          ),
+          shape: MaterialStateProperty.all(shapex),
         ),
-        backgroundColor: MaterialStateProperty.resolveWith<Color>(
-          // background color    this is color:
-              (Set<MaterialState> states) =>
-          states.contains(MaterialState.disabled) ? disabledColorx : colorx,
-        ),
-        shape: MaterialStateProperty.all(shapex),
-      ),
-      onPressed: onPressedx as void Function(),
-      child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8.0), child: childx));
+        onPressed: onPressedx as void Function(),
+        child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0), child: childx)),
+  );
 }
 
 
