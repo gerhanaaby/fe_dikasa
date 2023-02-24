@@ -1,18 +1,18 @@
-//@dart=2.9
+
 import 'package:flutter/material.dart';
 
 //Elevated Button
 Widget elevatedBtnApp(
-    {Color colorx,
-      double widthx,
-      double heightx,
-      @required Widget childx,
-      RoundedRectangleBorder shapex,
-      @required Function onPressedx,
-      Key keyx,
-      Color disabledColorx,
-      Color disabledTextColorx,
-      Color textColorx}) {
+    {Color? colorx,
+      double? widthx,
+      double? heightx,
+      required Widget childx,
+      RoundedRectangleBorder? shapex,
+      required Function onPressedx,
+      Key? keyx,
+      Color? disabledColorx,
+      Color? disabledTextColorx,
+      Color? textColorx}) {
   if (disabledTextColorx == null && disabledColorx == null) {
     disabledTextColorx = colorx;
   }
@@ -23,13 +23,13 @@ Widget elevatedBtnApp(
     child: ElevatedButton(
         key: keyx,
         style: ButtonStyle(
-          foregroundColor: MaterialStateProperty.resolveWith<Color>(
+          foregroundColor: MaterialStateProperty.resolveWith<Color?>(
             // text color
                 (Set<MaterialState> states) => states.contains(MaterialState.disabled)
                 ? disabledTextColorx
                 : textColorx,
           ),
-          backgroundColor: MaterialStateProperty.resolveWith<Color>(
+          backgroundColor: MaterialStateProperty.resolveWith<Color?>(
             // background color    this is color:
                 (Set<MaterialState> states) =>
             states.contains(MaterialState.disabled) ? disabledColorx : colorx,
@@ -44,14 +44,14 @@ Widget elevatedBtnApp(
 
 //Text Button
 Widget textButtonApp(
-    {Color colorx,
-      @required Widget childx,
-      RoundedRectangleBorder shapex,
-      @required Function onPressedx,
-      Key keyx,
-      Color disabledColorx,
-      Color disabledTextColorx,
-      Color textColorx}) {
+    {Color? colorx,
+      required Widget childx,
+      RoundedRectangleBorder? shapex,
+      required Function onPressedx,
+      Key? keyx,
+      Color? disabledColorx,
+      Color? disabledTextColorx,
+      Color? textColorx}) {
   if (disabledTextColorx == null && disabledColorx == null) {
     disabledTextColorx = colorx;
   }
@@ -60,13 +60,13 @@ Widget textButtonApp(
     child: TextButton(
         key: keyx,
         style: ButtonStyle(
-          foregroundColor: MaterialStateProperty.resolveWith<Color>(
+          foregroundColor: MaterialStateProperty.resolveWith<Color?>(
             // text color
                 (Set<MaterialState> states) => states.contains(MaterialState.disabled)
                 ? disabledTextColorx
                 : textColorx,
           ),
-          backgroundColor: MaterialStateProperty.resolveWith<Color>(
+          backgroundColor: MaterialStateProperty.resolveWith<Color?>(
             // background color    this is color:
                 (Set<MaterialState> states) =>
             states.contains(MaterialState.disabled) ? disabledColorx : colorx,
@@ -81,4 +81,4 @@ Widget textButtonApp(
 
 
 //Outline Button
-Widget outlineBtnApp(){}
+// Widget outlineBtnApp(){}
