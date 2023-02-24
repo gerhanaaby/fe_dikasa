@@ -1,6 +1,12 @@
+import 'package:fe_dikasa/features/login/login.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  // add these lines
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.landscapeLeft, DeviceOrientation.landscapeRight]);
   runApp(const MyApp());
 }
 
@@ -24,7 +30,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const Login(),
     );
   }
 }
@@ -113,3 +119,6 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+
+
