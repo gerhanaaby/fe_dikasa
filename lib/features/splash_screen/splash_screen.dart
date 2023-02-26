@@ -1,5 +1,6 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
-import 'package:splashscreen/splashscreen.dart';
 import '../register/register_berhasil.dart';
 
 class Splash extends StatelessWidget {
@@ -12,18 +13,18 @@ class Splash extends StatelessWidget {
     var betterApp = "better app";
     double fontSize = 30;
 
+    Timer(Duration(seconds: 3), () {
+      Navigator.of(context).pushReplacement(MaterialPageRoute(
+        builder: (context) => RegisterSuccess(),
+      ));
+    });
+
     return Scaffold(
       body: Center(
         child: Stack(
           fit: StackFit.expand,
           children: [
             // The splash screen
-            SplashScreen(
-              seconds: 3,
-              navigateAfterSeconds: RegisterSuccess(),
-              loaderColor: Colors.white,
-            ),
-            // The logo image and text
             Positioned(
               left: 0,
               right: 0,
