@@ -7,6 +7,7 @@ const robotoCondensedDarkOrange = TextStyle(
   fontWeight: FontWeight.normal,
   color: darkOrangeAccentColor,
 );
+<<<<<<< HEAD
 
 const whiteto = TextStyle(
   fontFamily: 'Poppins',
@@ -14,3 +15,5 @@ const whiteto = TextStyle(
   fontWeight: FontWeight.normal,
   color: textFormColorGrey,
 );
+=======
+>>>>>>> rey

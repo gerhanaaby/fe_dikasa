@@ -56,14 +56,13 @@ class _registerOneState extends State<registerOne> {
                             return null;
                           },
                           prefix: const Icon(Icons.person_rounded,
-                              color: textFormColorGrey),
+                              color: grey_formField),
                           textType: TextInputType.name,
                           textLabel: "Nama Usaha",
                           textHint: "Masukan nama usaha",
                           labelStyleForm: whiteto,
-                          focusedColor: textFormColorGrey,
-                          enabledColor: textFormColorGrey,
-                          backgroundColor: bgTextFromGrey
+                          focusedColor: grey_formField,
+                          enabledColor: grey_formField,
                         ),
                         textRegisterField(
                           validatorForm: (value) {
@@ -75,14 +74,14 @@ class _registerOneState extends State<registerOne> {
                             return null;
                           },
                           prefix: const Icon(Icons.date_range_outlined,
-                              color: textFormColorGrey),
+                              color: grey_formField),
                           textType: TextInputType.name,
                           textLabel: "Alamat Usaha",
                           textHint: "Masukan alamat usaha",
                           labelStyleForm: whiteto,
-                          focusedColor: textFormColorGrey,
-                          enabledColor: textFormColorGrey,
-                          columnBackgroundColor: bgTextFromGrey
+                          focusedColor: grey_formField,
+                          enabledColor: grey_formField,
+                          columnBackgroundColor: grey_formField
                         ),
                         textRegisterField(
                           validatorForm: (value) {
@@ -94,13 +93,13 @@ class _registerOneState extends State<registerOne> {
                             return null;
                           },
                           prefix: const Icon(Icons.phone_in_talk_rounded,
-                              color: textFormColorGrey),
+                              color: grey_formField),
                           textType: TextInputType.phone,
                           textLabel: "Nomor Hp usaha",
                           textHint: "Masukan nomor hp usaha",
                           labelStyleForm: whiteto,
-                          focusedColor: textFormColorGrey,
-                          enabledColor: textFormColorGrey,
+                          focusedColor: grey_formField,
+                          enabledColor: grey_formField,
                         ),
                         textRegisterField(
                           validatorForm: (value) {
@@ -112,13 +111,13 @@ class _registerOneState extends State<registerOne> {
                             return null;
                           },
                           prefix: const Icon(Icons.email_outlined,
-                              color: textFormColorGrey),
+                              color: grey_formField),
                           textType: TextInputType.emailAddress,
                           textLabel: "Email Usaha [Optional]",
                           textHint: "Masukan alamat email",
                           labelStyleForm: whiteto,
-                          focusedColor: textFormColorGrey,
-                          enabledColor: textFormColorGrey,
+                          focusedColor: grey_formField,
+                          enabledColor: grey_formField,
                         )
                       ],
                     )),
@@ -126,11 +125,11 @@ class _registerOneState extends State<registerOne> {
                     childx: Text("Selanjutnya"),
                     onPressedx: () {},
                     colorx: darkOrangeAccentColor,
-                    textColorx: whiteColor),
+                    textColorx: white_main),
                 textButtonApp(
                     childx: Text("Kembali"),
                     onPressedx: () {},
-                    textColorx: blueColor),
+                    textColorx: blue_btnMain),
               ],
             )),
       ],

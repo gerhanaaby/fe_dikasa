@@ -98,5 +98,17 @@ flutter:
     - family: Ubuntu
       fonts:
         - asset: assets/fonts/Ubuntu-Regular.ttf
+    - family: PoppinsRegular
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+    - family: PoppinsMedium
+      fonts:
+        - asset: assets/fonts/Poppins-Medium.ttf
+    - family: PoppinsSemiBold
+      fonts:
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+    - family: PoppinsItalic
+      fonts:
+        - asset: assets/fonts/Poppins-Italic.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
