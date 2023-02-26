@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c19fb9d1-4193-4ef1-a118-43406f6959da" name="Changes" comment="" />
+    <list default="true" id="c19fb9d1-4193-4ef1-a118-43406f6959da" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/constants/colors.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constants/colors.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/constants/text_form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constants/text_form.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/constants/text_styles.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/constants/text_styles.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/register/register_informasi_pemilik.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/register/register_informasi_pemilik.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,8 +34,15 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
     "WebServerToolWindowFactoryState": "false",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
     "last_opened_file_path": "C:/Data/Project/fe_dikasa",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "AndroidSdkUpdater",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -53,5 +69,8 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.configurationType" implementationName="FlutterRunConfigurationType" />
   </component>
 </project>

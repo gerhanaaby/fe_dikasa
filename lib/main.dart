@@ -1,4 +1,5 @@
 import 'package:fe_dikasa/features/login/login.dart';
+import 'package:fe_dikasa/features/register/register_informasi_pemilik.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const Login(),
+      home: const registerOne(),
     );
   }
 }
