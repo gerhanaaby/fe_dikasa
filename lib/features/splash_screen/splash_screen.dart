@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
 import '../register/register_berhasil.dart';
 
+
+
 class Splash extends StatelessWidget {
-  const Splash({Key? key});
+  const Splash({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
