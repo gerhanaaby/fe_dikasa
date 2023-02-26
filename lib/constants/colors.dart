@@ -6,7 +6,8 @@ const darkOrangeAccentColor = Color(0xFFFF9100);
 
 const whiteColor = Color.fromARGB(255, 255, 255, 255);
 const blueColor = Color.fromARGB(255, 0, 94, 255);
-const textFormColorGrey =  Color.fromRGBO(112, 112, 112, 0.45);
+const textFormColorGrey = Color.fromRGBO(112, 112, 112, 0.45);
+const textFormColorDarkGrey = Color.fromRGBO(116, 116, 116, 1);
 const bgTextFromGrey = Color.fromRGBO(238, 238, 238, 1);
 //orange
 const orange_btnMain = Color(0xFF8227);
@@ -19,7 +20,8 @@ const grey_textMain_h1 = Color(0x656565);
 const grey_formField = Color(0xEEEEEE);
 const grey_productName = Color(0x726F6F);
 const grey_headerLogin = Color(0x737373);
-const grey_unSelectOptionButton_Pelanggan = Color(0xD9D9D9); //also : headerButton (left)
+const grey_unSelectOptionButton_Pelanggan =
+    Color(0xD9D9D9); //also : headerButton (left)
 const grey_unSelectOptionButton_MinumanTambahan = Color(0xEBEBEB); //also : OTP
 const grey_header = Color(0xF6F6F6); //also : nama user (header)
 const grey_cardProduct = Color(0xEDEDED);
@@ -47,9 +49,6 @@ const red_btnMain = Color(0x9D1414);
 
 //green
 const green_textColorMain = Color(0x218831);
-
-
-
 
 const kPrimaryGradientColor = LinearGradient(
   begin: Alignment.topLeft,

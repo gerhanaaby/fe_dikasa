@@ -17,14 +17,14 @@ const whiteto = TextStyle(
 
 const pepehead1 = TextStyle(
   fontFamily: 'Poppins',
-  fontSize: 28,
+  fontSize: 20,
   fontWeight: FontWeight.normal,
-  color: textFormColorGrey,
+  color: textFormColorDarkGrey,
 );
 
 const pepehead2 = TextStyle(
     fontFamily: 'Poppins',
     fontSize: 14,
     fontWeight: FontWeight.normal,
-    color: textFormColorGrey,
+    color: textFormColorDarkGrey,
     fontStyle: FontStyle.italic);

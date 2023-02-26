@@ -64,10 +64,12 @@ Widget headingRegister(
   return SizedBox(
       width: width,
       height: height,
-      child: Text(
-        textLabel,
-        style: TextStyle(fontSize: fontsize, fontFamily: fonttype),
-      ));
+      child: Padding(
+          padding: EdgeInsets.only(bottom: 20.0),
+          child: Text(
+            textLabel,
+            style: labelStyleForm,
+          )));
 }
 
 Widget subHeading(
@@ -78,22 +80,14 @@ Widget subHeading(
     String Function(String) validatorForm,
     Widget prefix,
     Widget suffix,
+    TextAlign align,
     TextStyle labelStyleForm,
     TextInputType textType}) {
   return Padding(
     padding: const EdgeInsets.only(left: 70.0, right: 70.0, bottom: 20.0),
-    child: TextFormField(
-      validator: validatorForm,
-      controller: controller,
-      keyboardType: textType,
-      decoration: InputDecoration(
-        contentPadding: const EdgeInsets.all(12),
-        prefixIcon: prefix,
-        suffixIcon: suffix,
-        labelText: textLabel,
-        labelStyle: labelStyleForm,
-        hintText: textHint,
-      ),
+    child: TextField(
+      style: labelStyleForm,
+      textAlign: align,
     ),
   );
 }
@@ -134,6 +128,7 @@ Widget textRegisterField(
         labelText: textLabel,
         labelStyle: labelStyleForm,
         hintText: textHint,
+        hoverColor: backgroundColor,
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(100.0),
           borderSide: BorderSide(

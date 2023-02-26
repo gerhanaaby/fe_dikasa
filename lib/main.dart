@@ -33,11 +33,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const registerStep1(),
+      home: const registerStep3(),
     );
   }
 }
-
-
-
-
