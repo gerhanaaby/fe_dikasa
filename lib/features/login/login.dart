@@ -1,4 +1,3 @@
-
 import 'package:fe_dikasa/constants/button.dart';
 import 'package:fe_dikasa/constants/colors.dart';
 import 'package:fe_dikasa/constants/text_form.dart';
@@ -37,7 +36,6 @@ class _LoginState extends State<Login> {
               mainAxisAlignment: MainAxisAlignment.center,
               //crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-
                 Form(
                     key: formKey,
                     child: Column(
