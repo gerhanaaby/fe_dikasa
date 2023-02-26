@@ -7,6 +7,11 @@ class Splash extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const betterPrice = 'better price';
+    var betterExp = 'better experience';
+    var data = "better app";
+    double fontSize = 30;
+
     return Scaffold(
       body: SizedBox(
         child: Stack(
@@ -45,8 +50,8 @@ class Splash extends StatelessWidget {
                       width: 264,
                       height: 42,
                       child: Text(
-                        "better price ",
-                        style: TextStyle(fontSize: 30),
+                        betterPrice,
+                        style: TextStyle(fontSize: fontSize),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -54,8 +59,8 @@ class Splash extends StatelessWidget {
                       width: 160,
                       height: 42,
                       child: Text(
-                        "better experience",
-                        style: TextStyle(fontSize: 30),
+                        betterExp,
+                        style: TextStyle(fontSize: fontSize),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -63,8 +68,8 @@ class Splash extends StatelessWidget {
                       width: 175,
                       height: 42,
                       child: Text(
-                        "better app",
-                        style: TextStyle(fontSize: 30),
+                        data,
+                        style: TextStyle(fontSize: fontSize),
                         textAlign: TextAlign.center,
                       ),
                     ),

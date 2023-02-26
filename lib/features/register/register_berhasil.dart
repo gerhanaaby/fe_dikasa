@@ -1,5 +1,6 @@
 import 'package:fe_dikasa/constants/button.dart';
 import 'package:fe_dikasa/constants/colors.dart';
+import 'package:fe_dikasa/features/login/login.dart';
 import 'package:flutter/material.dart';
 
 class RegisterSuccess extends StatelessWidget {
@@ -7,6 +8,10 @@ class RegisterSuccess extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var messageBerhasil = "Akun Baru Berhasil di Buat !!";
+    var messageBerhasil2 =
+        "Terima Kasih telah memilih Dikasa. Sukses Selalu dan Selamat Bergabung";
+
     return Scaffold(
       body: Row(
         children: [
@@ -37,7 +42,7 @@ class RegisterSuccess extends StatelessWidget {
                 width: 396,
                 height: 42,
                 child: Text(
-                  "Akun Baru Berhasil di Buat !!",
+                  messageBerhasil,
                   style: TextStyle(fontSize: 25),
                   textAlign: TextAlign.center,
                 ),
@@ -58,7 +63,7 @@ class RegisterSuccess extends StatelessWidget {
                   child: Title(
                     color: Colors.grey,
                     child: Text(
-                      "Terima Kasih telah memilih Dikasa. Sukses Selalu dan Selamat Bergabung",
+                      messageBerhasil2,
                       style:
                           TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
                       textAlign: TextAlign.center,
@@ -66,7 +71,12 @@ class RegisterSuccess extends StatelessWidget {
                   )),
               elevatedBtnApp(
                   childx: Text("Selesai"),
-                  onPressedx: () {},
+                  onPressedx: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Login()),
+                    );
+                  },
                   colorx: originalOrangeAccentColor),
             ],
           )),
