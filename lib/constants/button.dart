@@ -89,9 +89,6 @@ Widget outlinedBtnApp(
 }
 
 
-}
-
-
 //Text Button
 Widget textButtonApp(
     {Color colorx,
