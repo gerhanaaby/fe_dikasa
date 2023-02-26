@@ -1,19 +1,19 @@
-//@dart=2.9
+
 import 'package:flutter/material.dart';
 
 Widget textFormField(
-    {String textLabel,
-      String textHint,
-      double height,
-      TextEditingController controller,
-      String Function(String) validatorForm,
-      Widget prefix,
-      Widget suffix,
-      TextStyle labelStyleForm,
-      TextInputType textType,
-      Color focusedColor,
-      Color enabledColor,
-      bool obscureText}) {
+    {String? textLabel,
+      String? textHint,
+      double? height,
+      TextEditingController? controller,
+      String? Function(String?)? validatorForm,
+      Widget? prefix,
+      Widget? suffix,
+      TextStyle? labelStyleForm,
+      TextInputType? textType,
+      required Color focusedColor,
+      required Color enabledColor,
+      bool? obscureText}) {
   textLabel ?? (textLabel = "Enter Title");
   textHint ?? (textHint = "Enter Hint");
   height ?? (height = 50.0);

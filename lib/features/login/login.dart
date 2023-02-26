@@ -1,4 +1,4 @@
-//@dart=2.9
+
 import 'package:fe_dikasa/constants/button.dart';
 import 'package:fe_dikasa/constants/colors.dart';
 import 'package:fe_dikasa/constants/text_form.dart';
@@ -6,7 +6,7 @@ import 'package:fe_dikasa/constants/text_styles.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
-  const Login({Key key}) : super(key: key);
+  const Login({Key? key}) : super(key: key);
 
   @override
   State<Login> createState() => _LoginState();
@@ -44,7 +44,7 @@ class _LoginState extends State<Login> {
                       children: [
                         textFormField(
                           validatorForm: (value) {
-                            if (value.isEmpty) {
+                            if (value!.isEmpty) {
                               return "The Username field cannot be empty";
                             } else if (value.length < 3) {
                               return "The Username has to be at least 3 characters long";
@@ -62,7 +62,7 @@ class _LoginState extends State<Login> {
                         ),
                         textFormField(
                             validatorForm: (value) {
-                              if (value.isEmpty) {
+                              if (value!.isEmpty) {
                                 return "The password field cannot be empty";
                               } else if (value.length < 8) {
                                 return "The password has to be at least 8 characters long";
