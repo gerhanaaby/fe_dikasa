@@ -37,7 +37,6 @@ class _LoginState extends State<Login> {
               mainAxisAlignment: MainAxisAlignment.center,
               //crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-
                 Form(
                     key: formKey,
                     child: Column(
