@@ -3,17 +3,17 @@ import 'package:flutter/material.dart';
 
 Widget textFormField(
     {String textLabel,
-      String textHint,
-      double height,
-      TextEditingController controller,
-      String Function(String) validatorForm,
-      Widget prefix,
-      Widget suffix,
-      TextStyle labelStyleForm,
-      TextInputType textType,
-      Color focusedColor,
-      Color enabledColor,
-      bool obscureText}) {
+    String textHint,
+    double height,
+    TextEditingController controller,
+    String Function(String) validatorForm,
+    Widget prefix,
+    Widget suffix,
+    TextStyle labelStyleForm,
+    TextInputType textType,
+    Color focusedColor,
+    Color enabledColor,
+    bool obscureText}) {
   textLabel ?? (textLabel = "Enter Title");
   textHint ?? (textHint = "Enter Hint");
   height ?? (height = 50.0);
@@ -53,18 +53,34 @@ Widget textFormField(
   );
 }
 
+Widget headingRegister(
+    {String textLabel,
+    String textHint,
+    double height,
+    double width,
+    double fontsize,
+    String fonttype,
+    TextStyle labelStyleForm}) {
+    return  SizedBox(
+         width :width,
+         height: height,
+          child: Text(
+                    textLabel,
+                    style: TextStyle(fontSize: fontsize,fontFamily: fonttype),
+                  )
+  );
+}
 
 Widget subHeading(
     {String textLabel,
-      String textHint,
-      double height,
-      TextEditingController controller,
-      String Function(String) validatorForm,
-      Widget prefix,
-      Widget suffix,
-      TextStyle labelStyleForm,
-      TextInputType textType}) {
-
+    String textHint,
+    double height,
+    TextEditingController controller,
+    String Function(String) validatorForm,
+    Widget prefix,
+    Widget suffix,
+    TextStyle labelStyleForm,
+    TextInputType textType}) {
   return Padding(
     padding: const EdgeInsets.only(left: 70.0, right: 70.0, bottom: 20.0),
     child: TextFormField(
@@ -83,22 +99,21 @@ Widget subHeading(
   );
 }
 
-
 Widget textRegisterField(
     {String textLabel,
-      String textHint,
-      double height,
-      TextEditingController controller,
-      String Function(String) validatorForm,
-      Widget prefix,
-      Widget suffix,
-      TextStyle labelStyleForm,
-      TextInputType textType,
-      Color focusedColor,
-      Color enabledColor,
-      Color columnBackgroundColor,
-      Color backgroundColor,
-      bool obscureText}) {
+    String textHint,
+    double height,
+    TextEditingController controller,
+    String Function(String) validatorForm,
+    Widget prefix,
+    Widget suffix,
+    TextStyle labelStyleForm,
+    TextInputType textType,
+    Color focusedColor,
+    Color enabledColor,
+    Color columnBackgroundColor,
+    Color backgroundColor,
+    bool obscureText}) {
   textLabel ?? (textLabel = "Enter Title");
   textHint ?? (textHint = "Enter Hint");
   height ?? (height = 50.0);
@@ -137,5 +152,3 @@ Widget textRegisterField(
     ),
   );
 }
-
-

@@ -4,14 +4,15 @@ import 'package:fe_dikasa/constants/text_form.dart';
 import 'package:fe_dikasa/constants/text_styles.dart';
 import 'package:flutter/material.dart';
 
-class registerOne extends StatefulWidget {
-  const registerOne({super.key});
+
+class registerStep1 extends StatefulWidget {
+  const registerStep1({super.key});
 
   @override
-  State<registerOne> createState() => _registerOneState();
+  State<registerStep1> createState() => _registerStep1State();
 }
 
-class _registerOneState extends State<registerOne> {
+class _registerStep1State extends State<registerStep1> {
   Key formKey = GlobalKey<FormState>();
   bool obscureText = true;
 
@@ -22,14 +23,12 @@ class _registerOneState extends State<registerOne> {
         body: Row(
         children: [
         Expanded(
-          flex: 4,
-          child: RotatedBox(
-              quarterTurns: 3,
-              child: Container(
+          flex: 6,
+          child: SizedBox(
+            height: double.infinity,
                 child: Image.asset(
-                'https://img.freepik.com/free-photo/asian-man-barista-holding-tablet-checking-order-from-customer-coffee-cafe_1150-8047.jpg?w=1380&t=st=1677393368~exp=1677393968~hmac=fdf9ebe481c0f59fe6540600fc0f208df93f9bc9227a1169f669d339ad06ef2a',
-                fit: BoxFit.cover,
-              )
+                'assets/images/register_img.png',
+                fit: BoxFit.fill,
               )),
         ),
         //SizedBox(width: size.width * 0.06),
@@ -39,9 +38,15 @@ class _registerOneState extends State<registerOne> {
               mainAxisAlignment: MainAxisAlignment.center,
               //crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                subHeading(
-                      textLabel: "Informasi Usaha ( Step 1 )"
-                    ),
+               headingRegister(
+                  textLabel: "Buat Akun Baru",
+                  fontsize: 20,        
+                  fonttype:'Poppins'
+                  ),
+               subHeading(
+                  textLabel: "Informasi Pemilik (Step 1 dari 3)",                        
+                  labelStyleForm: pepehead2,                  
+                  ),
                 Form(
                     key: formKey,
                     child: Column(
@@ -56,13 +61,14 @@ class _registerOneState extends State<registerOne> {
                             return null;
                           },
                           prefix: const Icon(Icons.person_rounded,
-                              color: grey_formField),
+                              color: textFormColorGrey),
                           textType: TextInputType.name,
                           textLabel: "Nama Usaha",
                           textHint: "Masukan nama usaha",
                           labelStyleForm: whiteto,
-                          focusedColor: grey_formField,
-                          enabledColor: grey_formField,
+                          focusedColor: textFormColorGrey,
+                          enabledColor: textFormColorGrey,
+                          backgroundColor: bgTextFromGrey
                         ),
                         textRegisterField(
                           validatorForm: (value) {
@@ -73,15 +79,15 @@ class _registerOneState extends State<registerOne> {
                             }
                             return null;
                           },
-                          prefix: const Icon(Icons.date_range_outlined,
-                              color: grey_formField),
+                          prefix: const Icon(Icons.map_outlined,
+                              color: textFormColorGrey),
                           textType: TextInputType.name,
                           textLabel: "Alamat Usaha",
                           textHint: "Masukan alamat usaha",
                           labelStyleForm: whiteto,
-                          focusedColor: grey_formField,
-                          enabledColor: grey_formField,
-                          columnBackgroundColor: grey_formField
+                          focusedColor: textFormColorGrey,
+                          enabledColor: textFormColorGrey,
+                          columnBackgroundColor: bgTextFromGrey
                         ),
                         textRegisterField(
                           validatorForm: (value) {
@@ -93,13 +99,13 @@ class _registerOneState extends State<registerOne> {
                             return null;
                           },
                           prefix: const Icon(Icons.phone_in_talk_rounded,
-                              color: grey_formField),
+                              color: textFormColorGrey),
                           textType: TextInputType.phone,
                           textLabel: "Nomor Hp usaha",
                           textHint: "Masukan nomor hp usaha",
                           labelStyleForm: whiteto,
-                          focusedColor: grey_formField,
-                          enabledColor: grey_formField,
+                          focusedColor: textFormColorGrey,
+                          enabledColor: textFormColorGrey,
                         ),
                         textRegisterField(
                           validatorForm: (value) {
@@ -111,13 +117,13 @@ class _registerOneState extends State<registerOne> {
                             return null;
                           },
                           prefix: const Icon(Icons.email_outlined,
-                              color: grey_formField),
+                              color: textFormColorGrey),
                           textType: TextInputType.emailAddress,
                           textLabel: "Email Usaha [Optional]",
                           textHint: "Masukan alamat email",
                           labelStyleForm: whiteto,
-                          focusedColor: grey_formField,
-                          enabledColor: grey_formField,
+                          focusedColor: textFormColorGrey,
+                          enabledColor: textFormColorGrey,
                         )
                       ],
                     )),
@@ -125,11 +131,12 @@ class _registerOneState extends State<registerOne> {
                     childx: Text("Selanjutnya"),
                     onPressedx: () {},
                     colorx: darkOrangeAccentColor,
-                    textColorx: white_main),
+                    widthx: 260,
+                    textColorx: whiteColor),
                 textButtonApp(
-                    childx: Text("Kembali"),
+                    childx: Text("Sudah Memiliki akun"),
                     onPressedx: () {},
-                    textColorx: blue_btnMain),
+                    textColorx: blueColor),
               ],
             )),
       ],

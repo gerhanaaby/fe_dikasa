@@ -12,5 +12,21 @@ const whiteto = TextStyle(
   fontFamily: 'Poppins',
   fontSize: 12,
   fontWeight: FontWeight.normal,
-  color: grey_formField,
+  color: textFormColorGrey,
+);
+
+
+const pepehead1 = TextStyle(
+  fontFamily: 'Poppins',
+  fontSize: 28,
+  fontWeight: FontWeight.normal,
+  color: textFormColorGrey,
+);
+
+const pepehead2 = TextStyle(
+  fontFamily: 'Poppins',
+  fontSize: 14,
+  fontWeight: FontWeight.normal,
+  color: textFormColorGrey,
+  fontStyle: FontStyle.italic
 );

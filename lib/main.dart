@@ -1,5 +1,7 @@
 import 'package:fe_dikasa/features/login/login.dart';
-import 'package:fe_dikasa/features/register/register_informasi_pemilik.dart';
+import 'package:fe_dikasa/features/register/registerStep1.dart';
+import 'package:fe_dikasa/features/register/registerStep2.dart';
+import 'package:fe_dikasa/features/register/registerStep3.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -31,7 +33,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const registerOne(),
+      home: const registerStep1(),
     );
   }
 }
