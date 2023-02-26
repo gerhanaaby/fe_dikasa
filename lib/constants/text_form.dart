@@ -72,26 +72,6 @@ Widget headingRegister(
           )));
 }
 
-Widget subHeading(
-    {String textLabel,
-    String textHint,
-    double height,
-    TextEditingController controller,
-    String Function(String) validatorForm,
-    Widget prefix,
-    Widget suffix,
-    TextAlign align,
-    TextStyle labelStyleForm,
-    TextInputType textType}) {
-  return Padding(
-    padding: const EdgeInsets.only(left: 70.0, right: 70.0, bottom: 20.0),
-    child: TextField(
-      style: labelStyleForm,
-      textAlign: align,
-    ),
-  );
-}
-
 Widget textRegisterField(
     {String textLabel,
     String textHint,
