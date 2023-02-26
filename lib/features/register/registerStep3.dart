@@ -71,9 +71,9 @@ class _registerStep3State extends State<registerStep3> {
                         textRegisterField(
                             validatorForm: (value) {
                               if (value.isEmpty) {
-                                return "The Username field cannot be empty";
+                                return "The Password field cannot be empty";
                               } else if (value.length < 3) {
-                                return "The Username has to be at least 3 characters long";
+                                return "The Password has to be at least 3 characters long";
                               }
                               return null;
                             },
@@ -89,9 +89,9 @@ class _registerStep3State extends State<registerStep3> {
                         textRegisterField(
                           validatorForm: (value) {
                             if (value.isEmpty) {
-                              return "The Username field cannot be empty";
+                              return "The Konfirmasi Password field cannot be empty";
                             } else if (value.length < 3) {
-                              return "The Username has to be at least 3 characters long";
+                              return "The Konfirmasi Password has to be at least 3 characters long";
                             }
                             return null;
                           },
@@ -107,9 +107,9 @@ class _registerStep3State extends State<registerStep3> {
                         textRegisterField(
                           validatorForm: (value) {
                             if (value.isEmpty) {
-                              return "The Username field cannot be empty";
+                              return "The email field cannot be empty";
                             } else if (value.length < 3) {
-                              return "The Username has to be at least 3 characters long";
+                              return "The email has to be at least 3 characters long";
                             }
                             return null;
                           },
