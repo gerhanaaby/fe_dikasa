@@ -9,7 +9,7 @@ class Splash extends StatelessWidget {
   Widget build(BuildContext context) {
     const betterPrice = 'better price';
     var betterExp = 'better experience';
-    var data = "better app";
+    var betterApp = "better app";
     double fontSize = 30;
 
     return Scaffold(
@@ -24,6 +24,16 @@ class Splash extends StatelessWidget {
               loaderColor: Colors.white,
             ),
             // The logo image and text
+            Positioned(
+              left: 0,
+              right: 0,
+              bottom: 0,
+              child: Image.asset(
+                "assets/images/loading.gif",
+                width: 400,
+                height: 300,
+              ),
+            ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -46,20 +56,28 @@ class Splash extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SizedBox(
-                      width: 160,
+                      width: 200,
                       height: 42,
                       child: Text(
-                        betterExp,
+                        betterPrice,
                         style: TextStyle(fontSize: fontSize),
                         textAlign: TextAlign.center,
                       ),
                     ),
-                    SizedBox(height: 10),
                     SizedBox(
-                      width: 175,
+                      width: 200,
                       height: 42,
                       child: Text(
-                        data,
+                        betterApp,
+                        style: TextStyle(fontSize: fontSize),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 300,
+                      height: 42,
+                      child: Text(
+                        betterExp,
                         style: TextStyle(fontSize: fontSize),
                         textAlign: TextAlign.center,
                       ),
