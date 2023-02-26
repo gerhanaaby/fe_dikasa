@@ -52,9 +52,9 @@ class _registerStep2State extends State<registerStep2> {
                         textRegisterField(
                             validatorForm: (value) {
                               if (value.isEmpty) {
-                                return "The Username field cannot be empty";
+                                return "The Nama Pemilik field cannot be empty";
                               } else if (value.length < 3) {
-                                return "The Username has to be at least 3 characters long";
+                                return "The Nama Pemilik has to be at least 3 characters long";
                               }
                               return null;
                             },
@@ -70,15 +70,15 @@ class _registerStep2State extends State<registerStep2> {
                         textRegisterField(
                             validatorForm: (value) {
                               if (value.isEmpty) {
-                                return "The Username field cannot be empty";
+                                return "The Tanggal Lahir field cannot be empty";
                               } else if (value.length < 3) {
-                                return "The Username has to be at least 3 characters long";
+                                return "The Tanggal Lahir has to be at least 3 characters long";
                               }
                               return null;
                             },
                             prefix: const Icon(Icons.date_range_outlined,
                                 color: textFormColorGrey),
-                            textType: TextInputType.name,
+                            textType: TextInputType.datetime,
                             textLabel: "Tanggal Lahir",
                             textHint: "Masukan alamat usaha",
                             labelStyleForm: whiteto,
@@ -88,9 +88,9 @@ class _registerStep2State extends State<registerStep2> {
                         textRegisterField(
                           validatorForm: (value) {
                             if (value.isEmpty) {
-                              return "The Username field cannot be empty";
+                              return "The Hp Pemilik field cannot be empty";
                             } else if (value.length < 3) {
-                              return "The Username has to be at least 3 characters long";
+                              return "The Hp Pemilik has to be at least 3 characters long";
                             }
                             return null;
                           },
@@ -106,9 +106,9 @@ class _registerStep2State extends State<registerStep2> {
                         textRegisterField(
                           validatorForm: (value) {
                             if (value.isEmpty) {
-                              return "The Username field cannot be empty";
+                              return "The Email Usaha field cannot be empty";
                             } else if (value.length < 3) {
-                              return "The Username has to be at least 3 characters long";
+                              return "The Email Usaha has to be at least 3 characters long";
                             }
                             return null;
                           },
