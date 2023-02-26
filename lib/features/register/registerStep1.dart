@@ -73,9 +73,9 @@ class _registerStep1State extends State<registerStep1> {
                         textRegisterField(
                           validatorForm: (value) {
                             if (value.isEmpty) {
-                              return "The Username field cannot be empty";
+                              return "The Alamat field cannot be empty";
                             } else if (value.length < 3) {
-                              return "The Username has to be at least 3 characters long";
+                              return "The Alamat has to be at least 3 characters long";
                             }
                             return null;
                           },
@@ -92,9 +92,9 @@ class _registerStep1State extends State<registerStep1> {
                         textRegisterField(
                           validatorForm: (value) {
                             if (value.isEmpty) {
-                              return "The Username field cannot be empty";
+                              return "The Nomor Hp field cannot be empty";
                             } else if (value.length < 3) {
-                              return "The Username has to be at least 3 characters long";
+                              return "The Nomor Hp has to be at least 3 characters long";
                             }
                             return null;
                           },
@@ -110,9 +110,9 @@ class _registerStep1State extends State<registerStep1> {
                         textRegisterField(
                           validatorForm: (value) {
                             if (value.isEmpty) {
-                              return "The Username field cannot be empty";
+                              return "The Email field cannot be empty";
                             } else if (value.length < 3) {
-                              return "The Username has to be at least 3 characters long";
+                              return "The Email has to be at least 3 characters long";
                             }
                             return null;
                           },
