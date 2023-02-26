@@ -1,6 +1,7 @@
 import 'package:fe_dikasa/constants/button.dart';
 import 'package:fe_dikasa/constants/colors.dart';
 import 'package:fe_dikasa/constants/text_form.dart';
+import 'package:fe_dikasa/constants/imageSide.dart';
 import 'package:fe_dikasa/constants/text_styles.dart';
 import 'package:flutter/material.dart';
 
@@ -24,12 +25,7 @@ class _registerStep1State extends State<registerStep1> {
           children: [
             Expanded(
               flex: 6,
-              child: SizedBox(
-                  height: double.infinity,
-                  child: Image.asset(
-                    'assets/images/register_img.png',
-                    fit: BoxFit.fill,
-                  )),
+              child: imageLogin(urlz: "assets/images/register_img.png"),
             ),
             //SizedBox(width: size.width * 0.06),
             Expanded(
