@@ -15,7 +15,6 @@ class _registerStep3State extends State<registerStep3> {
   Key formKey = GlobalKey<FormState>();
   bool obscureText = true;
 
-
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;

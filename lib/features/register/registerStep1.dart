@@ -4,7 +4,6 @@ import 'package:fe_dikasa/constants/text_form.dart';
 import 'package:fe_dikasa/constants/text_styles.dart';
 import 'package:flutter/material.dart';
 
-
 class registerStep1 extends StatefulWidget {
   const registerStep1({super.key});
 
@@ -21,12 +20,12 @@ class _registerStep1State extends State<registerStep1> {
     var size = MediaQuery.of(context).size;
     return Scaffold(
         body: Row(
-        children: [
+      children: [
         Expanded(
           flex: 6,
           child: SizedBox(
-            height: double.infinity,
-                child: Image.asset(
+              height: double.infinity,
+              child: Image.asset(
                 'assets/images/register_img.png',
                 fit: BoxFit.fill,
               )),
@@ -38,57 +37,54 @@ class _registerStep1State extends State<registerStep1> {
               mainAxisAlignment: MainAxisAlignment.center,
               //crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-               headingRegister(
-                  textLabel: "Buat Akun Baru",
-                  fontsize: 20,        
-                  fonttype:'Poppins'
-                  ),
-               subHeading(
-                  textLabel: "Informasi Pemilik (Step 1 dari 3)",                        
-                  labelStyleForm: pepehead2,                  
-                  ),
+                headingRegister(
+                    textLabel: "Buat Akun Baru",
+                    fontsize: 20,
+                    fonttype: 'Poppins'),
+                subHeading(
+                  textLabel: "Informasi Pemilik (Step 1 dari 3)",
+                  labelStyleForm: pepehead2,
+                ),
                 Form(
                     key: formKey,
                     child: Column(
                       children: [
                         textRegisterField(
-                          validatorForm: (value) {
-                            if (value.isEmpty) {
-                              return "The Username field cannot be empty";
-                            } else if (value.length < 3) {
-                              return "The Username has to be at least 3 characters long";
-                            }
-                            return null;
-                          },
-                          prefix: const Icon(Icons.person_rounded,
-                              color: textFormColorGrey),
-                          textType: TextInputType.name,
-                          textLabel: "Nama Usaha",
-                          textHint: "Masukan nama usaha",
-                          labelStyleForm: whiteto,
-                          focusedColor: textFormColorGrey,
-                          enabledColor: textFormColorGrey,
-                          backgroundColor: bgTextFromGrey
-                        ),
+                            validatorForm: (value) {
+                              if (value.isEmpty) {
+                                return "The Username field cannot be empty";
+                              } else if (value.length < 3) {
+                                return "The Username has to be at least 3 characters long";
+                              }
+                              return null;
+                            },
+                            prefix: const Icon(Icons.person_rounded,
+                                color: textFormColorGrey),
+                            textType: TextInputType.name,
+                            textLabel: "Nama Usaha",
+                            textHint: "Masukan nama usaha",
+                            labelStyleForm: whiteto,
+                            focusedColor: textFormColorGrey,
+                            enabledColor: textFormColorGrey,
+                            backgroundColor: bgTextFromGrey),
                         textRegisterField(
-                          validatorForm: (value) {
-                            if (value.isEmpty) {
-                              return "The Alamat field cannot be empty";
-                            } else if (value.length < 3) {
-                              return "The Alamat has to be at least 3 characters long";
-                            }
-                            return null;
-                          },
-                          prefix: const Icon(Icons.map_outlined,
-                              color: textFormColorGrey),
-                          textType: TextInputType.name,
-                          textLabel: "Alamat Usaha",
-                          textHint: "Masukan alamat usaha",
-                          labelStyleForm: whiteto,
-                          focusedColor: textFormColorGrey,
-                          enabledColor: textFormColorGrey,
-                          columnBackgroundColor: bgTextFromGrey
-                        ),
+                            validatorForm: (value) {
+                              if (value.isEmpty) {
+                                return "The Alamat field cannot be empty";
+                              } else if (value.length < 3) {
+                                return "The Alamat has to be at least 3 characters long";
+                              }
+                              return null;
+                            },
+                            prefix: const Icon(Icons.map_outlined,
+                                color: textFormColorGrey),
+                            textType: TextInputType.name,
+                            textLabel: "Alamat Usaha",
+                            textHint: "Masukan alamat usaha",
+                            labelStyleForm: whiteto,
+                            focusedColor: textFormColorGrey,
+                            enabledColor: textFormColorGrey,
+                            columnBackgroundColor: bgTextFromGrey),
                         textRegisterField(
                           validatorForm: (value) {
                             if (value.isEmpty) {

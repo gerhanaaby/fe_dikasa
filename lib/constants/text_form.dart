@@ -61,14 +61,13 @@ Widget headingRegister(
     double fontsize,
     String fonttype,
     TextStyle labelStyleForm}) {
-    return  SizedBox(
-         width :width,
-         height: height,
-          child: Text(
-                    textLabel,
-                    style: TextStyle(fontSize: fontsize,fontFamily: fonttype),
-                  )
-  );
+  return SizedBox(
+      width: width,
+      height: height,
+      child: Text(
+        textLabel,
+        style: TextStyle(fontSize: fontsize, fontFamily: fonttype),
+      ));
 }
 
 Widget subHeading(
