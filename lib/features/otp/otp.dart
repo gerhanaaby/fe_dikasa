@@ -12,22 +12,29 @@ class Otp extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Row(
+        
         children: [
           Expanded(
             flex: 4,
-            child: RotatedBox(
-              quarterTurns: 3,
+            child: SizedBox(
+              height: double.infinity,
+              // quarterTurns: 4,
               child: Container(
                 color: Colors.red,
+                child: const Image(
+                  image: AssetImage("assets/images/register_img.png"),
+                  fit: BoxFit.fill,
+                ),
               ),
             ),
           ),
+
+          
           Expanded(
             flex: 5,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-
                 const SizedBox(
                   width: 217.0,
                   height: 42.0,
@@ -36,7 +43,6 @@ class Otp extends StatelessWidget {
                     style: TextStyle(fontSize: 28),
                   ),
                 ),
-
                 const SizedBox(
                   width: 302.0,
                   height: 33.0,
@@ -45,7 +51,6 @@ class Otp extends StatelessWidget {
                     style: TextStyle(fontSize: 22),
                   ),
                 ),
-
                 SizedBox(
                   height: 110,
                   child: otpFormField(
@@ -68,7 +73,6 @@ class Otp extends StatelessWidget {
                     },
                   ),
                 ),
-
                 const SizedBox(
                   width: 475.0,
                   height: 148.0,
@@ -77,7 +81,6 @@ class Otp extends StatelessWidget {
                     style: TextStyle(fontSize: 20),
                   ),
                 ),
-                
                 SizedBox(
                   width: 487.0,
                   height: 53.0,
@@ -85,7 +88,7 @@ class Otp extends StatelessWidget {
                     onPressedx: () {},
                     childx: Text("Selanjutnya"),
                     textColorx: Colors.white,
-                    colorx: originalOrangeAccentColor,
+                    colorx: orange_btnMain,
                   ),
                 ),
                 SizedBox(
@@ -93,7 +96,7 @@ class Otp extends StatelessWidget {
                   height: 27.0,
                   child: TextButton(
                     child: Text('Kirim Ulang'),
-                    onPressed: (){},
+                    onPressed: () {},
                   ),
                 ),
               ],
