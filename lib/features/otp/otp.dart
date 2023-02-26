@@ -96,7 +96,7 @@ class Otp extends StatelessWidget {
                     onPressedx: () {},
                     childx: Text("Selanjutnya"),
                     textColorx: Colors.white,
-                    colorx: orange_btnMain,
+                    colorx: orangeBtnMain,
                   ),
                 ),
                 SizedBox(
