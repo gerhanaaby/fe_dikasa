@@ -1,6 +1,6 @@
-import 'package:fe_dikasa/features/register/register_berhasil.dart';
 import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
+import '../register/register_berhasil.dart';
 
 class Splash extends StatelessWidget {
   const Splash({Key? key});
@@ -13,7 +13,7 @@ class Splash extends StatelessWidget {
     double fontSize = 30;
 
     return Scaffold(
-      body: SizedBox(
+      body: Center(
         child: Stack(
           fit: StackFit.expand,
           children: [
@@ -25,10 +25,10 @@ class Splash extends StatelessWidget {
             ),
             // The logo image and text
             Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.max,
                   children: [
                     Image.asset(
                       'assets/images/logo.png',
@@ -44,17 +44,7 @@ class Splash extends StatelessWidget {
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.max,
                   children: [
-                    SizedBox(
-                      width: 264,
-                      height: 42,
-                      child: Text(
-                        betterPrice,
-                        style: TextStyle(fontSize: fontSize),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
                     SizedBox(
                       width: 160,
                       height: 42,
@@ -64,6 +54,7 @@ class Splash extends StatelessWidget {
                         textAlign: TextAlign.center,
                       ),
                     ),
+                    SizedBox(height: 10),
                     SizedBox(
                       width: 175,
                       height: 42,
