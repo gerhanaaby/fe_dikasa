@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 //Elevated Button
 Widget elevatedBtnApp(
+
     {Color? colorx,
       double? widthx,
       double? heightx,
@@ -13,6 +14,7 @@ Widget elevatedBtnApp(
       Color? disabledColorx,
       Color? disabledTextColorx,
       Color? textColorx}) {
+
   if (disabledTextColorx == null && disabledColorx == null) {
     disabledTextColorx = colorx;
   }
@@ -25,14 +27,17 @@ Widget elevatedBtnApp(
         style: ButtonStyle(
           foregroundColor: MaterialStateProperty.resolveWith<Color?>(
             // text color
-                (Set<MaterialState> states) => states.contains(MaterialState.disabled)
-                ? disabledTextColorx
-                : textColorx,
+            (Set<MaterialState> states) =>
+                states.contains(MaterialState.disabled)
+                    ? disabledTextColorx
+                    : textColorx,
           ),
           backgroundColor: MaterialStateProperty.resolveWith<Color?>(
             // background color    this is color:
-                (Set<MaterialState> states) =>
-            states.contains(MaterialState.disabled) ? disabledColorx : colorx,
+            (Set<MaterialState> states) =>
+                states.contains(MaterialState.disabled)
+                    ? disabledColorx
+                    : colorx,
           ),
           shape: MaterialStateProperty.all(shapex),
         ),
@@ -92,6 +97,7 @@ Widget textButtonApp(
       Color? disabledColorx,
       Color? disabledTextColorx,
       Color? textColorx}) {
+
   if (disabledTextColorx == null && disabledColorx == null) {
     disabledTextColorx = colorx;
   }
@@ -102,20 +108,25 @@ Widget textButtonApp(
         style: ButtonStyle(
           foregroundColor: MaterialStateProperty.resolveWith<Color?>(
             // text color
-                (Set<MaterialState> states) => states.contains(MaterialState.disabled)
-                ? disabledTextColorx
-                : textColorx,
+            (Set<MaterialState> states) =>
+                states.contains(MaterialState.disabled)
+                    ? disabledTextColorx
+                    : textColorx,
           ),
           backgroundColor: MaterialStateProperty.resolveWith<Color?>(
             // background color    this is color:
-                (Set<MaterialState> states) =>
-            states.contains(MaterialState.disabled) ? disabledColorx : colorx,
+            (Set<MaterialState> states) =>
+                states.contains(MaterialState.disabled)
+                    ? disabledColorx
+                    : colorx,
           ),
           shape: MaterialStateProperty.all(shapex),
         ),
         onPressed: onPressedx as void Function(),
         child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0), child: childx)),
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            child: childx)),
   );
 }
+
 

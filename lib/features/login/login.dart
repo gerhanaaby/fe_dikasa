@@ -1,6 +1,6 @@
-import 'package:fe_dikasa/constants/button.dart';
+import 'package:fe_dikasa/constants/buttons.dart';
 import 'package:fe_dikasa/constants/colors.dart';
-import 'package:fe_dikasa/constants/text_form.dart';
+import 'package:fe_dikasa/constants/forms.dart';
 import 'package:fe_dikasa/constants/text_styles.dart';
 import 'package:flutter/material.dart';
 

@@ -1,4 +1,4 @@
-import 'package:fe_dikasa/constants/button.dart';
+import 'package:fe_dikasa/constants/buttons.dart';
 import 'package:fe_dikasa/constants/colors.dart';
 import 'package:fe_dikasa/features/login/login.dart';
 import 'package:flutter/material.dart';

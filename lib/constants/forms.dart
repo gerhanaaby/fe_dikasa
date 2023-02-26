@@ -1,10 +1,14 @@
 
 import 'package:flutter/material.dart';
 
+import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
+
 Widget textFormField(
+
     {String? textLabel,
       String? textHint,
       double? height,
+      double? width,
       TextEditingController? controller,
       String? Function(String?)? validatorForm,
       Widget? prefix,
@@ -14,6 +18,7 @@ Widget textFormField(
       required Color focusedColor,
       required Color enabledColor,
       bool? obscureText}) {
+
   textLabel ?? (textLabel = "Enter Title");
   textHint ?? (textHint = "Enter Hint");
   height ?? (height = 50.0);
@@ -21,8 +26,9 @@ Widget textFormField(
   obscureText == null ? obscureText = true : false;
   //height !=null
 
-  return Padding(
-    padding: const EdgeInsets.only(left: 0, right: 0),
+  return SizedBox(
+    width: width,
+    height: height,
     child: TextFormField(
       obscureText: obscureText,
       validator: validatorForm,
@@ -54,3 +60,32 @@ Widget textFormField(
 }
 
 
+Widget otpFormField({
+  numberOfFields,
+  required Color borderColor,
+  fontSize,
+  radiusOfFields,
+  marginOfFields,
+
+  //set to true to show as box or false to show as dash
+  required bool showFieldAsBox,
+  required onSubmit,
+}){
+  fontSize ?? (fontSize = 70.0);
+  radiusOfFields ?? (radiusOfFields = 15.0);
+  marginOfFields ?? (marginOfFields = 20.0);
+
+  return SizedBox(
+    child:
+    OtpTextField(
+      fieldWidth: 77.0,
+      numberOfFields: numberOfFields,
+      borderColor: borderColor,
+      showFieldAsBox: showFieldAsBox,
+      textStyle: TextStyle(fontSize: fontSize),
+      borderRadius: BorderRadius.all(Radius.circular(radiusOfFields)),
+      margin: EdgeInsets.only(right: marginOfFields),
+      onSubmit: onSubmit,
+    ),
+  );
+}

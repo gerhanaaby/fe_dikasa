@@ -7,3 +7,24 @@ const robotoCondensedDarkOrange = TextStyle(
   fontWeight: FontWeight.normal,
   color: darkOrangeAccentColor,
 );
+
+const whiteto = TextStyle(
+  fontFamily: 'Poppins',
+  fontSize: 12,
+  fontWeight: FontWeight.normal,
+  color: textFormColorGrey,
+);
+
+const pepehead1 = TextStyle(
+  fontFamily: 'Poppins',
+  fontSize: 20,
+  fontWeight: FontWeight.normal,
+  color: textFormColorDarkGrey,
+);
+
+const pepehead2 = TextStyle(
+    fontFamily: 'Poppins',
+    fontSize: 14,
+    fontWeight: FontWeight.normal,
+    color: textFormColorDarkGrey,
+    fontStyle: FontStyle.italic);
