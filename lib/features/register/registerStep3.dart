@@ -1,9 +1,11 @@
-import 'package:fe_dikasa/constants/button.dart';
+import 'package:fe_dikasa/constants/buttons.dart';
 import 'package:fe_dikasa/constants/colors.dart';
 import 'package:fe_dikasa/constants/imageside.dart';
-import 'package:fe_dikasa/constants/text_form.dart';
+import 'package:fe_dikasa/constants/forms.dart';
 import 'package:fe_dikasa/constants/text_styles.dart';
 import 'package:flutter/material.dart';
+
+import 'package:fe_dikasa/constants/headers.dart';
 
 class registerStep3 extends StatefulWidget {
   const registerStep3({super.key});
@@ -43,9 +45,9 @@ class _registerStep3State extends State<registerStep3> {
                         key: formKey,
                         child: Column(
                           children: [
-                            textRegisterField(
+                            textFormField(
                                 validatorForm: (value) {
-                                  if (value.isEmpty) {
+                                  if (value!.isEmpty) {
                                     return "The Username field cannot be empty";
                                   } else if (value.length < 3) {
                                     return "The Username has to be at least 3 characters long";
@@ -60,10 +62,10 @@ class _registerStep3State extends State<registerStep3> {
                                 labelStyleForm: whiteto,
                                 focusedColor: textFormColorGrey,
                                 enabledColor: textFormColorGrey,
-                                backgroundColor: bgTextFromGrey),
-                            textRegisterField(
+                                ),
+                            textFormField(
                                 validatorForm: (value) {
-                                  if (value.isEmpty) {
+                                  if (value!.isEmpty) {
                                     return "The Password field cannot be empty";
                                   } else if (value.length < 3) {
                                     return "The Password has to be at least 3 characters long";
@@ -78,10 +80,10 @@ class _registerStep3State extends State<registerStep3> {
                                 labelStyleForm: whiteto,
                                 focusedColor: textFormColorGrey,
                                 enabledColor: textFormColorGrey,
-                                columnBackgroundColor: bgTextFromGrey),
-                            textRegisterField(
+                                ),
+                            textFormField(
                               validatorForm: (value) {
-                                if (value.isEmpty) {
+                                if (value!.isEmpty) {
                                   return "The Konfirmasi Password field cannot be empty";
                                 } else if (value.length < 3) {
                                   return "The Konfirmasi Password has to be at least 3 characters long";
@@ -97,9 +99,9 @@ class _registerStep3State extends State<registerStep3> {
                               focusedColor: textFormColorGrey,
                               enabledColor: textFormColorGrey,
                             ),
-                            textRegisterField(
+                            textFormField(
                               validatorForm: (value) {
-                                if (value.isEmpty) {
+                                if (value!.isEmpty) {
                                   return "The email field cannot be empty";
                                 } else if (value.length < 3) {
                                   return "The email has to be at least 3 characters long";

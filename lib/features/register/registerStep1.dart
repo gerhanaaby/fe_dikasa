@@ -1,6 +1,8 @@
-import 'package:fe_dikasa/constants/button.dart';
+import 'package:fe_dikasa/constants/buttons.dart';
 import 'package:fe_dikasa/constants/colors.dart';
-import 'package:fe_dikasa/constants/text_form.dart';
+import 'package:fe_dikasa/constants/forms.dart';
+
+import 'package:fe_dikasa/constants/headers.dart';
 import 'package:fe_dikasa/constants/imageSide.dart';
 import 'package:fe_dikasa/constants/text_styles.dart';
 import 'package:flutter/material.dart';
@@ -43,45 +45,45 @@ class _registerStep1State extends State<registerStep1> {
                         key: formKey,
                         child: Column(
                           children: [
-                            textRegisterField(
-                                validatorForm: (value) {
-                                  if (value.isEmpty) {
-                                    return "The Username field cannot be empty";
-                                  } else if (value.length < 3) {
-                                    return "The Username has to be at least 3 characters long";
-                                  }
-                                  return null;
-                                },
-                                prefix: const Icon(Icons.person_rounded,
-                                    color: textFormColorGrey),
-                                textType: TextInputType.name,
-                                textLabel: "Nama Usaha",
-                                textHint: "Masukan nama usaha",
-                                labelStyleForm: whiteto,
-                                focusedColor: textFormColorGrey,
-                                enabledColor: textFormColorGrey,
-                                backgroundColor: blueColor),
-                            textRegisterField(
-                                validatorForm: (value) {
-                                  if (value.isEmpty) {
-                                    return "The Alamat field cannot be empty";
-                                  } else if (value.length < 3) {
-                                    return "The Alamat has to be at least 3 characters long";
-                                  }
-                                  return null;
-                                },
-                                prefix: const Icon(Icons.map_outlined,
-                                    color: textFormColorGrey),
-                                textType: TextInputType.name,
-                                textLabel: "Alamat Usaha",
-                                textHint: "Masukan alamat usaha",
-                                labelStyleForm: whiteto,
-                                focusedColor: textFormColorGrey,
-                                enabledColor: textFormColorGrey,
-                                columnBackgroundColor: bgTextFromGrey),
-                            textRegisterField(
+                            textFormField(
                               validatorForm: (value) {
-                                if (value.isEmpty) {
+                                if (value!.isEmpty) {
+                                  return "The Username field cannot be empty";
+                                } else if (value.length < 3) {
+                                  return "The Username has to be at least 3 characters long";
+                                }
+                                return null;
+                              },
+                              prefix: const Icon(Icons.person_rounded,
+                                  color: textFormColorGrey),
+                              textType: TextInputType.name,
+                              textLabel: "Nama Usaha",
+                              textHint: "Masukan nama usaha",
+                              labelStyleForm: whiteto,
+                              focusedColor: textFormColorGrey,
+                              enabledColor: textFormColorGrey,
+                            ),
+                            textFormField(
+                              validatorForm: (value) {
+                                if (value!.isEmpty) {
+                                  return "The Alamat field cannot be empty";
+                                } else if (value.length < 3) {
+                                  return "The Alamat has to be at least 3 characters long";
+                                }
+                                return null;
+                              },
+                              prefix: const Icon(Icons.map_outlined,
+                                  color: textFormColorGrey),
+                              textType: TextInputType.name,
+                              textLabel: "Alamat Usaha",
+                              textHint: "Masukan alamat usaha",
+                              labelStyleForm: whiteto,
+                              focusedColor: textFormColorGrey,
+                              enabledColor: textFormColorGrey,
+                            ),
+                            textFormField(
+                              validatorForm: (value) {
+                                if (value!.isEmpty) {
                                   return "The Nomor Hp field cannot be empty";
                                 } else if (value.length < 3) {
                                   return "The Nomor Hp has to be at least 3 characters long";
@@ -97,9 +99,9 @@ class _registerStep1State extends State<registerStep1> {
                               focusedColor: textFormColorGrey,
                               enabledColor: textFormColorGrey,
                             ),
-                            textRegisterField(
+                            textFormField(
                               validatorForm: (value) {
-                                if (value.isEmpty) {
+                                if (value!.isEmpty) {
                                   return "The Email field cannot be empty";
                                 } else if (value.length < 3) {
                                   return "The Email has to be at least 3 characters long";
@@ -118,13 +120,13 @@ class _registerStep1State extends State<registerStep1> {
                           ],
                         )),
                     elevatedBtnApp(
-                        childx: Text("Selanjutnya"),
+                        childx: const Text("Selanjutnya"),
                         onPressedx: () {},
                         colorx: darkOrangeAccentColor,
                         widthx: 260,
                         textColorx: whiteColor),
                     textButtonApp(
-                        childx: Text("Sudah Memiliki akun"),
+                        childx: const Text("Sudah Memiliki akun"),
                         onPressedx: () {},
                         textColorx: blueColor),
                   ],

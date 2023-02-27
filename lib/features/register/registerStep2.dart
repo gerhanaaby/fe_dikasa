@@ -1,9 +1,11 @@
-import 'package:fe_dikasa/constants/button.dart';
+import 'package:fe_dikasa/constants/buttons.dart';
 import 'package:fe_dikasa/constants/colors.dart';
 import 'package:fe_dikasa/constants/imageside.dart';
-import 'package:fe_dikasa/constants/text_form.dart';
+import 'package:fe_dikasa/constants/forms.dart';
 import 'package:fe_dikasa/constants/text_styles.dart';
 import 'package:flutter/material.dart';
+
+import 'package:fe_dikasa/constants/headers.dart';
 
 class registerStep2 extends StatefulWidget {
   const registerStep2({super.key});
@@ -43,9 +45,9 @@ class _registerStep2State extends State<registerStep2> {
                         key: formKey,
                         child: Column(
                           children: [
-                            textRegisterField(
+                            textFormField(
                                 validatorForm: (value) {
-                                  if (value.isEmpty) {
+                                  if (value!.isEmpty) {
                                     return "The Nama Pemilik field cannot be empty";
                                   } else if (value.length < 3) {
                                     return "The Nama Pemilik has to be at least 3 characters long";
@@ -60,10 +62,10 @@ class _registerStep2State extends State<registerStep2> {
                                 labelStyleForm: whiteto,
                                 focusedColor: textFormColorGrey,
                                 enabledColor: textFormColorGrey,
-                                backgroundColor: bgTextFromGrey),
-                            textRegisterField(
+                                ),
+                            textFormField(
                                 validatorForm: (value) {
-                                  if (value.isEmpty) {
+                                  if (value!.isEmpty) {
                                     return "The Tanggal Lahir field cannot be empty";
                                   } else if (value.length < 3) {
                                     return "The Tanggal Lahir has to be at least 3 characters long";
@@ -78,10 +80,10 @@ class _registerStep2State extends State<registerStep2> {
                                 labelStyleForm: whiteto,
                                 focusedColor: textFormColorGrey,
                                 enabledColor: textFormColorGrey,
-                                columnBackgroundColor: bgTextFromGrey),
-                            textRegisterField(
+                                ),
+                            textFormField(
                               validatorForm: (value) {
-                                if (value.isEmpty) {
+                                if (value!.isEmpty) {
                                   return "The Hp Pemilik field cannot be empty";
                                 } else if (value.length < 3) {
                                   return "The Hp Pemilik has to be at least 3 characters long";
@@ -97,9 +99,9 @@ class _registerStep2State extends State<registerStep2> {
                               focusedColor: textFormColorGrey,
                               enabledColor: textFormColorGrey,
                             ),
-                            textRegisterField(
+                            textFormField(
                               validatorForm: (value) {
-                                if (value.isEmpty) {
+                                if (value!.isEmpty) {
                                   return "The Email Usaha field cannot be empty";
                                 } else if (value.length < 3) {
                                   return "The Email Usaha has to be at least 3 characters long";
