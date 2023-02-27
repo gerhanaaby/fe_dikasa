@@ -1,44 +1,54 @@
 import 'package:fe_dikasa/constants/colors.dart';
 import 'package:flutter/material.dart';
 
-const robotoCondensedDarkOrange = TextStyle(
-  fontFamily: 'Roboto Condensed',
-  fontSize: 12,
-  fontWeight: FontWeight.normal,
-  color: darkOrangeAccentColor,
-);
+robotoCondensedDarkOrangeNormal(
+    {required double fontSize,
+    FontStyle? fontStyle,
+    TextDecoration? textDecoration}) {
+  return TextStyle(
+      fontFamily: 'Roboto Condensed',
+      fontSize: fontSize,
+      fontWeight: FontWeight.normal,
+      color: darkOrangeAccentColor,
+      fontStyle: fontStyle,
+      decoration: textDecoration);
+}
 
-const poppins = TextStyle(
-  fontFamily: 'Poppins',
-  fontSize: 12,
-  fontWeight: FontWeight.normal,
-  color: textFormColorGrey,
-);
+robotoCondensedDarkOrangeBold(
+    {required double fontSize,
+    FontStyle? fontStyle,
+    TextDecoration? textDecoration}) {
+  return TextStyle(
+      fontFamily: 'Roboto Condensed',
+      fontSize: fontSize,
+      fontWeight: FontWeight.normal,
+      color: darkOrangeAccentColor,
+      fontStyle: fontStyle,
+      decoration: textDecoration);
+}
 
-const pepehead1 = TextStyle(
-  fontFamily: 'Poppins',
-  fontSize: 28,
-  fontWeight: FontWeight.normal,
-  color: textFormColorDarkGrey,
-);
+poppinsDarkGreyNormal(
+    {required double fontSize,
+    FontStyle? fontStyle,
+    TextDecoration? textDecoration}) {
+  return TextStyle(
+      fontFamily: 'Poppins',
+      fontSize: fontSize,
+      fontWeight: FontWeight.normal,
+      color: textFormColorGrey,
+      fontStyle: fontStyle,
+      decoration: textDecoration);
+}
 
-const pepehead2 = TextStyle(
-    fontFamily: 'Poppins',
-    fontSize: 22,
-    fontWeight: FontWeight.normal,
-    color: textFormColorDarkGrey,
-    fontStyle: FontStyle.italic);
-
-const pepehead3 = TextStyle(
-  fontFamily: 'Poppins',
-  fontSize: 20,
-  fontWeight: FontWeight.normal,
-  color: textFormColorDarkGrey,
-);
-
-const pepeButtonText = TextStyle(
-  fontFamily: 'Poppins',
-  fontSize: 18,
-  fontWeight: FontWeight.normal,
-  color: textFormColorDarkGrey,
-);
+poppinsDarkGreyBold(
+    {required double fontSize,
+    FontStyle? fontStyle,
+    TextDecoration? textDecoration}) {
+  return TextStyle(
+      fontFamily: 'Poppins',
+      fontSize: fontSize,
+      fontWeight: FontWeight.bold,
+      color: textFormColorGrey,
+      fontStyle: fontStyle,
+      decoration: textDecoration);
+}

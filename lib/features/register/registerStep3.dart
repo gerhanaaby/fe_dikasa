@@ -37,10 +37,10 @@ class _registerStep3State extends State<registerStep3> {
                   //crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     headingRegister(
-                        textLabel: "BUAT AKUN BARU", labelStyleForm: pepehead1),
+                        textLabel: "BUAT AKUN BARU", labelStyleForm: poppinsDarkGreyNormal(fontSize: 12)),
                     headingRegister(
                         textLabel: "Informasi Pemilik (Step 3 dari 3)",
-                        labelStyleForm: pepehead2),
+                        labelStyleForm: poppinsDarkGreyNormal(fontSize: 12)),
                     Form(
                         key: formKey,
                         child: Column(
@@ -59,7 +59,7 @@ class _registerStep3State extends State<registerStep3> {
                                 textType: TextInputType.name,
                                 textLabel: "Username",
                                 textHint: "Masukan Username",
-                                labelStyleForm: whiteto,
+                                labelStyleForm: poppinsDarkGreyNormal(fontSize: 12),
                                 focusedColor: textFormColorGrey,
                                 enabledColor: textFormColorGrey,
                                 ),
@@ -77,7 +77,7 @@ class _registerStep3State extends State<registerStep3> {
                                 textType: TextInputType.visiblePassword,
                                 textLabel: "Password",
                                 textHint: "Masukan Password",
-                                labelStyleForm: whiteto,
+                                labelStyleForm: poppinsDarkGreyNormal(fontSize: 12),
                                 focusedColor: textFormColorGrey,
                                 enabledColor: textFormColorGrey,
                                 ),
@@ -95,7 +95,7 @@ class _registerStep3State extends State<registerStep3> {
                               textType: TextInputType.visiblePassword,
                               textLabel: "Konfirmasi Password",
                               textHint: "Masukan konfirmasi password",
-                              labelStyleForm: whiteto,
+                              labelStyleForm: poppinsDarkGreyNormal(fontSize: 12),
                               focusedColor: textFormColorGrey,
                               enabledColor: textFormColorGrey,
                             ),
@@ -113,7 +113,7 @@ class _registerStep3State extends State<registerStep3> {
                               textType: TextInputType.multiline,
                               textLabel: "Email Verifikasi",
                               textHint: "Masukan email",
-                              labelStyleForm: whiteto,
+                              labelStyleForm: poppinsDarkGreyNormal(fontSize: 12),
                               focusedColor: textFormColorGrey,
                               enabledColor: textFormColorGrey,
                             )

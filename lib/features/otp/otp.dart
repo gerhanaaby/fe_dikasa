@@ -36,11 +36,11 @@ class Otp extends StatelessWidget {
                   child: imageLogoAuth(),
                 ),
                 headingRegister(
-                    textLabel: "BUAT AKUN BARU", labelStyleForm: pepehead1),
+                    textLabel: "BUAT AKUN BARU", labelStyleForm: poppinsDarkGreyNormal(fontSize: 16)),
                 headingRegister(
                     paddingBottom: 29.0,
                     textLabel: "Silahkan Masukan Kode OTP",
-                    labelStyleForm: pepehead2),
+                    labelStyleForm: poppinsDarkGreyNormal(fontSize: 16)),
                 Container(
                   margin:
                       const EdgeInsets.only(bottom: 38.0), // set margin here
@@ -73,7 +73,7 @@ class Otp extends StatelessWidget {
                     paddingBottom: 25.0,
                     textLabel:
                         "Kode OTP Telah kami kirimkan ke email yang anda pilih untuk melakukan verifikasi. Silakan check inbox email.",
-                    labelStyleForm: pepehead3),
+                    labelStyleForm: poppinsDarkGreyNormal(fontSize: 16)),
                 Container(
                   margin:
                       const EdgeInsets.only(bottom: 12.0), // set margin here

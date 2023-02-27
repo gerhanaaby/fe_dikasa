@@ -16,8 +16,8 @@ class Splash extends StatelessWidget {
     var betterApp = "better app";
     double fontSize = 30;
 
-    Timer(Duration(seconds: 3), () {
-      changeScreenReplacement(context, RegisterSuccess());
+    Timer(const Duration(seconds: 3), () {
+      changeScreenReplacement(context, const RegisterSuccess());
     });
 
     return Scaffold(

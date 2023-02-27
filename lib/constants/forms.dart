@@ -62,7 +62,8 @@ Widget otpFormField({
   fontSize,
   radiusOfFields,
   marginOfFields,
-
+  double? width,
+  double? height,
   //set to true to show as box or false to show as dash
   required bool showFieldAsBox,
   required onSubmit,
@@ -72,6 +73,8 @@ Widget otpFormField({
   marginOfFields ?? (marginOfFields = 20.0);
 
   return SizedBox(
+    width: width,
+    height: height,
     child: OtpTextField(
       fieldWidth: 77.0,
       numberOfFields: numberOfFields,
@@ -85,30 +88,32 @@ Widget otpFormField({
   );
 }
 
-Widget dropDownForm(
-  List<String> dropDownValue,
-  String labelText,
-) {
-  return DropdownButtonFormField(
-    decoration: InputDecoration(
-      border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
+Widget dropDownFormField(
+    List<String> dropDownValue, String labelText, double width, double height) {
+  return SizedBox(
+    width: width,
+    height: height,
+    child: DropdownButtonFormField(
+      decoration: InputDecoration(
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+        filled: true,
+        fillColor: Colors.white,
+        labelText: labelText,
+        labelStyle: TextStyle(
+          color: Colors.grey[700],
+          fontSize: 16,
+          fontWeight: FontWeight.bold,
+        ),
       ),
-      filled: true,
-      fillColor: Colors.white,
-      labelText: labelText,
-      labelStyle: TextStyle(
-        color: Colors.grey[700],
-        fontSize: 16,
-        fontWeight: FontWeight.bold,
-      ),
+      items: dropDownValue.map((String value) {
+        return DropdownMenuItem(
+          value: value,
+          child: Text(value),
+        );
+      }).toList(),
+      onChanged: (String? value) {},
     ),
-    items: dropDownValue.map((String value) {
-      return DropdownMenuItem(
-        value: value,
-        child: Text(value),
-      );
-    }).toList(),
-    onChanged: (String? value) {},
   );
 }
