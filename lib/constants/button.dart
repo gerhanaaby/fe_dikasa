@@ -125,7 +125,3 @@ Widget textButtonApp(
       child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8.0), child: childx));
 }
-
-
-//Outline Button
-Widget outlineBtnApp(){}
