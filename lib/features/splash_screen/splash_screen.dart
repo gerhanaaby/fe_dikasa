@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:fe_dikasa/utils/change_screen.dart';
 import 'package:flutter/material.dart';
 import '../register/register_berhasil.dart';
 
@@ -16,9 +17,7 @@ class Splash extends StatelessWidget {
     double fontSize = 30;
 
     Timer(Duration(seconds: 3), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (context) => RegisterSuccess(),
-      ));
+      changeScreenReplacement(context, RegisterSuccess());
     });
 
     return Scaffold(
