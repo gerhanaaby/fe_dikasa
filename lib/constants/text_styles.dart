@@ -8,7 +8,7 @@ const robotoCondensedDarkOrange = TextStyle(
   color: darkOrangeAccentColor,
 );
 
-const whiteto = TextStyle(
+const poppins = TextStyle(
   fontFamily: 'Poppins',
   fontSize: 12,
   fontWeight: FontWeight.normal,
