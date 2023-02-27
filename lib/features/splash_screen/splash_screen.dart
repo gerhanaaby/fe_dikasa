@@ -1,9 +1,13 @@
+import 'dart:async';
+
+import 'package:fe_dikasa/utils/change_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:splashscreen/splashscreen.dart';
 import '../register/register_berhasil.dart';
 
+
+
 class Splash extends StatelessWidget {
-  const Splash({Key? key});
+  const Splash({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,18 +16,16 @@ class Splash extends StatelessWidget {
     var betterApp = "better app";
     double fontSize = 30;
 
+    Timer(const Duration(seconds: 3), () {
+      changeScreenReplacement(context, const RegisterSuccess());
+    });
+
     return Scaffold(
       body: Center(
         child: Stack(
           fit: StackFit.expand,
           children: [
             // The splash screen
-            SplashScreen(
-              seconds: 3,
-              navigateAfterSeconds: RegisterSuccess(),
-              loaderColor: Colors.white,
-            ),
-            // The logo image and text
             Positioned(
               left: 0,
               right: 0,

@@ -37,10 +37,10 @@ class _registerStep1State extends State<registerStep1> {
                   //crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     headingRegister(
-                        textLabel: "BUAT AKUN BARU", labelStyleForm: pepehead1),
+                        textLabel: "BUAT AKUN BARU", labelStyleForm: poppinsDarkGreyNormal(fontSize: 12)),
                     headingRegister(
                         textLabel: "Informasi Pemilik (Step 1 dari 3)",
-                        labelStyleForm: pepehead2),
+                        labelStyleForm: poppinsDarkGreyNormal(fontSize: 15)),
                     Form(
                         key: formKey,
                         child: Column(
@@ -59,7 +59,7 @@ class _registerStep1State extends State<registerStep1> {
                                 textType: TextInputType.name,
                                 textLabel: "Nama Usaha",
                                 textHint: "Masukan nama usaha",
-                                labelStyleForm: whiteto,
+                                labelStyleForm: poppinsDarkGreyNormal(fontSize: 12),
                                 focusedColor: textFormColorGrey,
                                 enabledColor: textFormColorGrey,
                                 ),
@@ -77,7 +77,7 @@ class _registerStep1State extends State<registerStep1> {
                                 textType: TextInputType.name,
                                 textLabel: "Alamat Usaha",
                                 textHint: "Masukan alamat usaha",
-                                labelStyleForm: whiteto,
+                                labelStyleForm: poppinsDarkGreyNormal(fontSize: 12),
                                 focusedColor: textFormColorGrey,
                                 enabledColor: textFormColorGrey,
                                 ),
@@ -95,7 +95,7 @@ class _registerStep1State extends State<registerStep1> {
                               textType: TextInputType.phone,
                               textLabel: "Nomor Hp usaha",
                               textHint: "Masukan nomor hp usaha",
-                              labelStyleForm: whiteto,
+                              labelStyleForm: poppinsDarkGreyNormal(fontSize: 12),
                               focusedColor: textFormColorGrey,
                               enabledColor: textFormColorGrey,
                             ),
@@ -113,7 +113,7 @@ class _registerStep1State extends State<registerStep1> {
                               textType: TextInputType.emailAddress,
                               textLabel: "Email Usaha [Optional]",
                               textHint: "Masukan alamat email",
-                              labelStyleForm: whiteto,
+                              labelStyleForm: poppinsDarkGreyNormal(fontSize: 12),
                               focusedColor: textFormColorGrey,
                               enabledColor: textFormColorGrey,
                             )

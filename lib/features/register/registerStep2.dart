@@ -37,50 +37,53 @@ class _registerStep2State extends State<registerStep2> {
                   //crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     headingRegister(
-                        textLabel: "BUAT AKUN BARU", labelStyleForm: pepehead1),
+                        textLabel: "BUAT AKUN BARU",
+                        labelStyleForm: poppinsDarkGreyNormal(fontSize: 12)),
                     headingRegister(
                         textLabel: "Informasi Pemilik (Step 2 dari 3)",
-                        labelStyleForm: pepehead2),
+                        labelStyleForm: poppinsDarkGreyNormal(fontSize: 12)),
                     Form(
                         key: formKey,
                         child: Column(
                           children: [
                             textFormField(
-                                validatorForm: (value) {
-                                  if (value!.isEmpty) {
-                                    return "The Nama Pemilik field cannot be empty";
-                                  } else if (value.length < 3) {
-                                    return "The Nama Pemilik has to be at least 3 characters long";
-                                  }
-                                  return null;
-                                },
-                                prefix: const Icon(Icons.person_rounded,
-                                    color: textFormColorGrey),
-                                textType: TextInputType.name,
-                                textLabel: "Nama Pemilik",
-                                textHint: "Masukan nama pemilik",
-                                labelStyleForm: whiteto,
-                                focusedColor: textFormColorGrey,
-                                enabledColor: textFormColorGrey,
-                                ),
+                              validatorForm: (value) {
+                                if (value!.isEmpty) {
+                                  return "The Nama Pemilik field cannot be empty";
+                                } else if (value.length < 3) {
+                                  return "The Nama Pemilik has to be at least 3 characters long";
+                                }
+                                return null;
+                              },
+                              prefix: const Icon(Icons.person_rounded,
+                                  color: textFormColorGrey),
+                              textType: TextInputType.name,
+                              textLabel: "Nama Pemilik",
+                              textHint: "Masukan nama pemilik",
+                              labelStyleForm:
+                                  poppinsDarkGreyNormal(fontSize: 12),
+                              focusedColor: textFormColorGrey,
+                              enabledColor: textFormColorGrey,
+                            ),
                             textFormField(
-                                validatorForm: (value) {
-                                  if (value!.isEmpty) {
-                                    return "The Tanggal Lahir field cannot be empty";
-                                  } else if (value.length < 3) {
-                                    return "The Tanggal Lahir has to be at least 3 characters long";
-                                  }
-                                  return null;
-                                },
-                                prefix: const Icon(Icons.date_range_outlined,
-                                    color: textFormColorGrey),
-                                textType: TextInputType.datetime,
-                                textLabel: "Tanggal Lahir",
-                                textHint: "Masukan alamat usaha",
-                                labelStyleForm: whiteto,
-                                focusedColor: textFormColorGrey,
-                                enabledColor: textFormColorGrey,
-                                ),
+                              validatorForm: (value) {
+                                if (value!.isEmpty) {
+                                  return "The Tanggal Lahir field cannot be empty";
+                                } else if (value.length < 3) {
+                                  return "The Tanggal Lahir has to be at least 3 characters long";
+                                }
+                                return null;
+                              },
+                              prefix: const Icon(Icons.date_range_outlined,
+                                  color: textFormColorGrey),
+                              textType: TextInputType.datetime,
+                              textLabel: "Tanggal Lahir",
+                              textHint: "Masukan alamat usaha",
+                              labelStyleForm:
+                                  poppinsDarkGreyNormal(fontSize: 12),
+                              focusedColor: textFormColorGrey,
+                              enabledColor: textFormColorGrey,
+                            ),
                             textFormField(
                               validatorForm: (value) {
                                 if (value!.isEmpty) {
@@ -95,7 +98,8 @@ class _registerStep2State extends State<registerStep2> {
                               textType: TextInputType.phone,
                               textLabel: "Nomor Hp Pemilik",
                               textHint: "Masukan nomor hp pemilik",
-                              labelStyleForm: whiteto,
+                              labelStyleForm:
+                                  poppinsDarkGreyNormal(fontSize: 12),
                               focusedColor: textFormColorGrey,
                               enabledColor: textFormColorGrey,
                             ),
@@ -113,7 +117,8 @@ class _registerStep2State extends State<registerStep2> {
                               textType: TextInputType.emailAddress,
                               textLabel: "Email Pemilik [Optional]",
                               textHint: "Masukan alamat email",
-                              labelStyleForm: whiteto,
+                              labelStyleForm:
+                                  poppinsDarkGreyNormal(fontSize: 12),
                               focusedColor: textFormColorGrey,
                               enabledColor: textFormColorGrey,
                             )

@@ -54,7 +54,7 @@ class _LoginState extends State<Login> {
                           textType: TextInputType.name,
                           textLabel: "Username / Email",
                           textHint: "Enter your Username / Email",
-                          labelStyleForm: robotoCondensedDarkOrange,
+                          labelStyleForm: robotoCondensedDarkOrangeNormal(fontSize: 16),
                           focusedColor: darkOrangeAccentColor,
                           enabledColor: darkOrangeAccentColor,
                         ),
@@ -86,7 +86,7 @@ class _LoginState extends State<Login> {
                             textType: TextInputType.visiblePassword,
                             textLabel: "Password",
                             textHint: "Enter your Password",
-                            labelStyleForm: robotoCondensedDarkOrange,
+                            labelStyleForm: robotoCondensedDarkOrangeNormal(fontSize: 16),
                             focusedColor: darkOrangeAccentColor,
                             enabledColor: darkOrangeAccentColor)
                       ],
