@@ -33,14 +33,7 @@ class Otp extends StatelessWidget {
               children: [
                 Container(
                   margin: const EdgeInsets.all(20.0), // set margin here
-                  child: const SizedBox(
-                    height: 51.0,
-                    width: 243.0,
-                    child: Image(
-                      image: AssetImage("assets/images/dikasa_logo_auth.png"),
-                      fit: BoxFit.fill,
-                    ),
-                  ),
+                  child: imageLogoAuth(),
                 ),
                 headingRegister(
                     textLabel: "BUAT AKUN BARU", labelStyleForm: pepehead1),
