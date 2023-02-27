@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 
-
-
 const lightOrangeAccentColor = Color(0xFFFFD180);
 const originalOrangeAccentColor = Color(0xFFFFAB40);
 const darkOrangeAccentColor = Color(0xFFFF9100);
 
+const whiteColor = Color.fromARGB(255, 255, 255, 255);
+const blueColor = Color.fromARGB(255, 0, 94, 255);
+const textFormColorGrey = Color.fromRGBO(112, 112, 112, 0.45);
+const textFormColorDarkGrey = Color.fromRGBO(116, 116, 116, 1);
+const bgTextFromGrey = Color.fromRGBO(238, 238, 238, 1);
 //orange
 const orangeBtnMain = Color(0xFF8227);
 
@@ -27,6 +30,7 @@ const greyBgBtnCollection = Color(0xF8F8F8);
 
 const greyBgHeaderPembayaranStage2 = Color(0xF9F9F9);
 const greyBgHeaderPembayaranStage3 = Color(0xF6F6F6);
+
 
 //blue
 const blueHeaderButton = Color(0x077CD3); //also : btn_lockScreen
