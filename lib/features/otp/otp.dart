@@ -1,9 +1,13 @@
+import 'package:fe_dikasa/constants/imageSide.dart';
 import 'package:flutter/material.dart';
 
 import 'package:fe_dikasa/constants/buttons.dart';
 import 'package:fe_dikasa/constants/colors.dart';
+import 'package:fe_dikasa/constants/text_styles.dart';
+import 'package:fe_dikasa/constants/headers.dart';
 
 import 'package:fe_dikasa/constants/forms.dart';
+
 class Otp extends StatelessWidget {
   const Otp({super.key});
 
@@ -14,16 +18,11 @@ class Otp extends StatelessWidget {
       body: Row(
         children: [
           Expanded(
-            flex: 4,
+            flex: 5,
             child: SizedBox(
               height: double.infinity,
-              // quarterTurns: 4,
               child: Container(
-                color: Colors.red,
-                child: const Image(
-                  image: AssetImage("assets/images/register_img.png"),
-                  fit: BoxFit.fill,
-                ),
+                child: imageLogin(urlz: "assets/images/register_img.png"),
               ),
             ),
           ),
@@ -32,81 +31,64 @@ class Otp extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const SizedBox(
-                  height: 51.0,
-                  width: 243.0,
-                    child: Image(
-                      image: AssetImage("assets/images/dikasa_logo_auth.png"),
-                      fit: BoxFit.fill,
+                Container(
+                  margin: const EdgeInsets.all(20.0), // set margin here
+                  child: imageLogoAuth(),
+                ),
+                headingRegister(
+                    textLabel: "BUAT AKUN BARU", labelStyleForm: pepehead1),
+                headingRegister(
+                    paddingBottom: 29.0,
+                    textLabel: "Silahkan Masukan Kode OTP",
+                    labelStyleForm: pepehead2),
+                Container(
+                  margin:
+                      const EdgeInsets.only(bottom: 38.0), // set margin here
+                  child: SizedBox(
+                    height: 110,
+                    child: otpFormField(
+                      numberOfFields: 5,
+                      borderColor: greyFormField,
+                      marginOfFields: 20.0,
+                      fontSize: 70.0,
+                      radiusOfFields: 15.0,
+                      showFieldAsBox: true,
+                      onSubmit: (String verificationCode) {
+                        showDialog(
+                            context: context,
+                            builder: (context) {
+                              return AlertDialog(
+                                title: const Text("Verification Code"),
+                                content:
+                                    Text('Code entered is $verificationCode'),
+                              );
+                            });
+                      },
                     ),
                   ),
-
-                const SizedBox(
-                  width: 217.0,
-                  height: 42.0,
-                  child: Text(
-                    "Buat Akun Baru",
-                    style: TextStyle(fontSize: 28),
-                  ),
                 ),
-
-                const SizedBox(
-                  width: 302.0,
-                  height: 33.0,
-                  child: Text(
-                    "Silahkan Masukan Kode OTP",
-                    style: TextStyle(fontSize: 22),
-                  ),
-                ),
-                
-                SizedBox(
-                  height: 110,
-                  child: otpFormField(
-                    numberOfFields: 5,
-                    borderColor: Color(0xEDEDED),
-                    marginOfFields: 20.0,
-                    fontSize: 70.0,
-                    radiusOfFields: 15.0,
-                    showFieldAsBox: true,
-                    onSubmit: (String verificationCode) {
-                      showDialog(
-                          context: context,
-                          builder: (context) {
-                            return AlertDialog(
-                              title: const Text("Verification Code"),
-                              content:
-                                  Text('Code entered is $verificationCode'),
-                            );
-                          });
-                    },
-                  ),
-                ),
-                const SizedBox(
-                  width: 475.0,
-                  height: 148.0,
-                  child: Text(
-                    "Kode OTP Telah kami kirimkan ke email yang anda pilih untuk melakukan verifikasi. Silakan check inbox email.",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                ),
-                SizedBox(
-                  width: 487.0,
-                  height: 53.0,
+                headingRegister(
+                    width: 475.0,
+                    height: 148.0,
+                    paddingBottom: 25.0,
+                    textLabel:
+                        "Kode OTP Telah kami kirimkan ke email yang anda pilih untuk melakukan verifikasi. Silakan check inbox email.",
+                    labelStyleForm: pepehead3),
+                Container(
+                  margin:
+                      const EdgeInsets.only(bottom: 12.0), // set margin here
                   child: elevatedBtnApp(
+                      childx: const Text("Selanjutnya"),
+                      onPressedx: () {},
+                      colorx: darkOrangeAccentColor,
+                      widthx: 487.0,
+                      heightx: 53.0,
+                      textColorx: whiteColor),
+                ),
+                textButtonApp(
+                    childx: const Text("Kirim Ulang"),
                     onPressedx: () {},
-                    childx: Text("Selanjutnya"),
-                    textColorx: Colors.white,
-                    colorx: orangeBtnMain,
-                  ),
-                ),
-                SizedBox(
-                  width: 105.0,
-                  height: 27.0,
-                  child: TextButton(
-                    child: Text('Kirim Ulang'),
-                    onPressed: () {},
-                  ),
-                ),
+                    textColorx: blueColor),
               ],
             ),
           ),

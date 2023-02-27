@@ -17,14 +17,28 @@ const poppins = TextStyle(
 
 const pepehead1 = TextStyle(
   fontFamily: 'Poppins',
-  fontSize: 20,
+  fontSize: 28,
   fontWeight: FontWeight.normal,
   color: textFormColorDarkGrey,
 );
 
 const pepehead2 = TextStyle(
     fontFamily: 'Poppins',
-    fontSize: 14,
+    fontSize: 22,
     fontWeight: FontWeight.normal,
     color: textFormColorDarkGrey,
     fontStyle: FontStyle.italic);
+
+const pepehead3 = TextStyle(
+  fontFamily: 'Poppins',
+  fontSize: 20,
+  fontWeight: FontWeight.normal,
+  color: textFormColorDarkGrey,
+);
+
+const pepeButtonText = TextStyle(
+  fontFamily: 'Poppins',
+  fontSize: 18,
+  fontWeight: FontWeight.normal,
+  color: textFormColorDarkGrey,
+);
