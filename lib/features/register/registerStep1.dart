@@ -17,7 +17,7 @@ class registerStep1 extends StatefulWidget {
 class _registerStep1State extends State<registerStep1> {
   Key formKey = GlobalKey<FormState>();
   bool obscureText = true;
-  double widthz = 260.0;
+  double widthz = 487.0;
   double bottom = 15.0;
 
   @override
@@ -28,12 +28,12 @@ class _registerStep1State extends State<registerStep1> {
         body: Row(
           children: [
             Expanded(
-              flex: 6,
+              flex: 5,
               child: imageLogin(urlz: "assets/images/register_img.png"),
             ),
             //SizedBox(width: size.width * 0.06),
             Expanded(
-                flex: 4,
+                flex: 5,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   //crossAxisAlignment: CrossAxisAlignment.center,
@@ -57,6 +57,7 @@ class _registerStep1State extends State<registerStep1> {
                           children: [
                             textFormField(
                               paddingBottom: bottom,
+                              height: 49.0,
                               width: widthz,
                               validatorForm: (value) {
                                 if (value!.isEmpty) {

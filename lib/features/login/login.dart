@@ -26,12 +26,12 @@ class _LoginState extends State<Login> {
         body: Row(
       children: [
         Expanded(
-          flex: 6,
+          flex: 5,
           child: imageLogin(urlz: "assets/images/register_img.png"),
         ),
         //SizedBox(width: size.width * 0.06),
         Expanded(
-            flex: 4,
+            flex: 5,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               //crossAxisAlignment: CrossAxisAlignment.center,
