@@ -67,7 +67,7 @@ flutter:
     - assets/images/register_berhasil.jpg
     - assets/images/logo.png
     - assets/images/loading.gif
-
+    - assets/images/register_success_img.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
