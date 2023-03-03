@@ -17,6 +17,8 @@ class registerStep2 extends StatefulWidget {
 class _registerStep2State extends State<registerStep2> {
   Key formKey = GlobalKey<FormState>();
   bool obscureText = true;
+  double widthz = 260.0;
+  double bottom = 15.0;
 
   @override
   Widget build(BuildContext context) {
@@ -36,17 +38,26 @@ class _registerStep2State extends State<registerStep2> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   //crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    Container(
+                      margin: const EdgeInsets.all(20.0), // set margin here
+                      child: imageLogoAuth(),
+                    ),
                     headingRegister(
                         textLabel: "BUAT AKUN BARU",
-                        labelStyleForm: poppinsDarkGreyNormal(fontSize: 12)),
+                        paddingBottom: 20.0,
+                        labelStyleForm: poppinsDarkGreyBold(fontSize: 18)),
                     headingRegister(
                         textLabel: "Informasi Pemilik (Step 2 dari 3)",
-                        labelStyleForm: poppinsDarkGreyNormal(fontSize: 12)),
+                        paddingBottom: 20.0,
+                        labelStyleForm: poppinsDarkGreyNormal(
+                            fontSize: 15, fontStyle: FontStyle.italic)),
                     Form(
                         key: formKey,
                         child: Column(
                           children: [
                             textFormField(
+                              paddingBottom: bottom,
+                              width: widthz,
                               validatorForm: (value) {
                                 if (value!.isEmpty) {
                                   return "The Nama Pemilik field cannot be empty";
@@ -66,6 +77,8 @@ class _registerStep2State extends State<registerStep2> {
                               enabledColor: textFormColorGrey,
                             ),
                             textFormField(
+                              paddingBottom: bottom,
+                              width: widthz,
                               validatorForm: (value) {
                                 if (value!.isEmpty) {
                                   return "The Tanggal Lahir field cannot be empty";
@@ -85,6 +98,8 @@ class _registerStep2State extends State<registerStep2> {
                               enabledColor: textFormColorGrey,
                             ),
                             textFormField(
+                              paddingBottom: 20.0,
+                              width: widthz,
                               validatorForm: (value) {
                                 if (value!.isEmpty) {
                                   return "The Hp Pemilik field cannot be empty";
@@ -104,6 +119,8 @@ class _registerStep2State extends State<registerStep2> {
                               enabledColor: textFormColorGrey,
                             ),
                             textFormField(
+                              paddingBottom: bottom,
+                              width: widthz,
                               validatorForm: (value) {
                                 if (value!.isEmpty) {
                                   return "The Email Usaha field cannot be empty";

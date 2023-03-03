@@ -1,16 +1,16 @@
-
 import 'package:flutter/material.dart';
+
 Widget headingRegister(
     {String? textLabel,
-      String? textHint,
-      double? height,
-      double? width,
-      double? paddingBottom,
-      double? fontSize,
-      String? fontType,
-      TextStyle? labelStyleForm}) {
+    String? textHint,
+    double? height,
+    double? width,
+    double? paddingBottom,
+    double? fontSize,
+    String? fontType,
+    TextStyle? labelStyleForm}) {
   textLabel ?? (textLabel = "Enter Title");
-  paddingBottom ?? (paddingBottom= 51.0);
+  paddingBottom ?? (paddingBottom = 51.0);
 
   return SizedBox(
       width: width,
