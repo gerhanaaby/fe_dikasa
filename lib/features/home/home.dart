@@ -1,3 +1,4 @@
+import 'package:fe_dikasa/features/dashboard/dashboard.dart';
 import 'package:fe_dikasa/features/login/login.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     if (currentPage == 1) {
-      page = Login();
+      page = Dashboard();
     } else if (currentPage == 2) {
       page = Login();
     } else if (currentPage == 3) {
@@ -33,6 +34,7 @@ class _HomeState extends State<Home> {
       page = Login();
     }
     return Scaffold(
+        appBar: AppBar(title: Text("DIKASA")),
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
         // through the options in the drawer if there isn't enough vertical
@@ -61,7 +63,7 @@ class _HomeState extends State<Home> {
           ),
         ),
       ),
-      body: page,
+      body: page
     );
   }
 

@@ -2,17 +2,18 @@ import 'package:flutter/material.dart';
 
 class MenuList extends StatelessWidget {
   final List<String>? images;
-  final List<String>? title;
-  final List<String>? phones;
+  final List<String>? menus;
+  final List<String>? prices;
 
-  const MenuList({Key? key, this.title, this.images, this.phones})
+  const MenuList({Key? key, this.menus, this.images, this.prices})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      scrollDirection: Axis.vertical,
+      shrinkWrap: true,
       itemCount: images?.length,
-
       itemBuilder: (BuildContext context, int index) {
         return Card(
           shape:

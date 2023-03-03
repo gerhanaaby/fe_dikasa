@@ -15,6 +15,8 @@ class _SlideAbleListState extends State<SlideAbleList> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      shrinkWrap: true,
+      scrollDirection: Axis.vertical,
       itemCount: widget.images?.length,
       itemBuilder: (BuildContext context, int index) {
         return Dismissible(

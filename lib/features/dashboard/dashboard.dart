@@ -10,15 +10,15 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
-  final List<String> myList = [
-    'assets/banner1.jpg',
-    'assets/banner2.jpg',
-    'assets/banner3.jpg',
-    'assets/banner4.jpg',
-    'assets/banner5.jpg',
+  final List<String> listImage = [
+    'assets/images/register_img.png',
+    'assets/images/register_img.png',
+    'assets/images/register_img.png',
+    'assets/images/register_img.png',
+    'assets/images/register_img.png',
   ];
-  final List<String> names = ['ichigo', 'niigo', 'sango', 'yongo', 'hakko'];
-  final List<String> phones = [
+  final List<String> menus = ['ichigo', 'niigo', 'sango', 'yongo', 'hakko'];
+  final List<String> prices = [
     '(021)678392',
     '(021)678334',
     '(021)672414',
@@ -29,19 +29,32 @@ class _DashboardState extends State<Dashboard> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Column(
+        Expanded(
+          flex: 7,
+          child: Column(
+              children: [
+                Container(width: 50, height: 50, child: Text("ini group button dan search"),color: Colors.black,),
+                SizedBox(
+                  width: 800,
+                  height: 50,
+                  child: MenuList(
+                    images: listImage,
+                    menus: menus,
+                    prices: prices,),
+                )
+              ]),
+        ),
+        Expanded(
+          flex: 3,
+          child: Column(
             children: [
-              Container(width: 50, height: 50,child: Text("ini group button dan search"),color: Colors.black,),
-              MenuList(images: myList,
-                title: names,
-                phones: phones,)
-            ]),
-        Column(
-          children: [
-            Container(),
-            SlideAbleList(),
-
-          ],
+              Container(width: 50, height: 50, child: Text("ini group button dan order"),color: Colors.black,),
+              SizedBox(
+                width: 500,
+                  height: 150,
+                  child: SlideAbleList()),
+            ],
+          ),
         )
       ],
     );
