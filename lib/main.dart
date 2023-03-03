@@ -1,3 +1,4 @@
+import 'package:fe_dikasa/features/register/cobaForm.dart';
 import 'package:fe_dikasa/features/splash_screen/splash_screen.dart';
 
 import 'package:flutter/material.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const Splash(),
+      home: const cobaForm(),
     );
   }
 }
