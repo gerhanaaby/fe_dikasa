@@ -19,7 +19,7 @@ const whiteMain = Color(0xFFFFF);
 const greyTextMainH1 = Color(0x656565);
 const greyFormField = Color(0xEEEEEE);
 const greyProductName = Color(0x726F6F);
-const greyHeaderLogin = Color(0x737373);
+const greyHeaderLogin = Color(0x8F8F8F);
 const greyUnSelectOptionButtonPelanggan = Color(0xD9D9D9); //also : headerButton (left)
 const greyUnSelectOptionButtonMinumanTambahan = Color(0xEBEBEB); //also : OTP
 const greyHeader = Color(0xF6F6F6); //also : nama user (header)
@@ -27,10 +27,9 @@ const greyCardProduct = Color(0xEDEDED);
 const greyBgListListOrder = Color(0xF6F6F6);
 const greyBgListTotalPesanan = Color(0xDBDADA);
 const greyBgBtnCollection = Color(0xF8F8F8);
-
 const greyBgHeaderPembayaranStage2 = Color(0xF9F9F9);
 const greyBgHeaderPembayaranStage3 = Color(0xF6F6F6);
-
+const greyPlaceHolder = Color(0xAFAFAF);
 
 //blue
 const blueHeaderButton = Color(0x077CD3); //also : btn_lockScreen
