@@ -1,3 +1,5 @@
+import 'package:fe_dikasa/features/dashboard/dashboard.dart';
+import 'package:fe_dikasa/features/home/home.dart';
 import 'package:fe_dikasa/features/login/login.dart';
 import 'package:fe_dikasa/features/otp/otp.dart';
 
@@ -37,7 +39,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const registerStep1(),
+      home: const Home(),
     );
   }
 }
