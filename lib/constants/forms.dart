@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 
 Widget textFormField({
@@ -94,7 +93,11 @@ Widget otpFormField({
 }
 
 Widget dropDownFormField(
-    List<String> dropDownValue, String labelText, double width, double height) {
+  List<String> dropDownValue,
+  String labelText,
+  double width,
+  double height,
+) {
   return SizedBox(
     width: width,
     height: height,
@@ -115,7 +118,17 @@ Widget dropDownFormField(
       items: dropDownValue.map((String value) {
         return DropdownMenuItem(
           value: value,
-          child: Text(value),
+          child: Row(
+            children: [
+              // Image.asset(
+              //   'assets/images/logo.png',
+              //   width: 24,
+              //   height: 24,
+              // ),
+              SizedBox(width: 10),
+              Text(value),
+            ],
+          ),
         );
       }).toList(),
       onChanged: (String? value) {},
