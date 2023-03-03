@@ -4,6 +4,8 @@ import 'package:fe_dikasa/constants/forms.dart';
 import 'package:fe_dikasa/constants/headers.dart';
 import 'package:fe_dikasa/constants/imageSide.dart';
 import 'package:fe_dikasa/constants/text_styles.dart';
+import 'package:fe_dikasa/features/register/registerForm.dart';
+import 'package:fe_dikasa/utils/change_screen.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -16,7 +18,7 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   Key formKey = GlobalKey<FormState>();
   bool obscureText = true;
-  double widthz = 300.0;
+  double widthz = 487.0;
   double bottom = 15.0;
 
   @override
@@ -26,23 +28,25 @@ class _LoginState extends State<Login> {
         body: Row(
       children: [
         Expanded(
-          flex: 6,
+          flex: 5,
           child: imageLogin(urlz: "assets/images/register_img.png"),
         ),
         //SizedBox(width: size.width * 0.06),
         Expanded(
-            flex: 4,
+            flex: 5,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               //crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  margin: const EdgeInsets.all(20.0), // set margin here
+                  margin: const EdgeInsets.fromLTRB(0, 0, 0, 20.0),
+
+                  /// set margin here
                   child: imageLogoAuth(),
                 ),
                 headingRegister(
                     textLabel: "MASUK KE DASHBOARD",
-                    paddingBottom: 20.0,
+                    paddingBottom: 50.0,
                     labelStyleForm: poppinsDarkGreyBold(fontSize: 18)),
                 Form(
                     key: formKey,
@@ -64,7 +68,7 @@ class _LoginState extends State<Login> {
                           textType: TextInputType.name,
                           textLabel: "Username / Email",
                           textHint: "Enter your Username / Email",
-                          labelStyleForm: poppinsDarkGreyNormal(fontSize: 16),
+                          labelStyleForm: poppinsDarkGreyNormal(fontSize: 12),
                           focusedColor: textFormColorGrey,
                           enabledColor: textFormColorGrey,
                         ),
@@ -98,7 +102,7 @@ class _LoginState extends State<Login> {
                             textType: TextInputType.visiblePassword,
                             textLabel: "Password",
                             textHint: "Enter your Password",
-                            labelStyleForm: poppinsDarkGreyNormal(fontSize: 16),
+                            labelStyleForm: poppinsDarkGreyNormal(fontSize: 12),
                             focusedColor: textFormColorGrey,
                             enabledColor: textFormColorGrey)
                       ],
@@ -110,8 +114,10 @@ class _LoginState extends State<Login> {
                     widthx: widthz,
                     textColorx: whiteColor),
                 textButtonApp(
-                    childx: const Text("Lupa pass?"),
-                    onPressedx: () {},
+                    childx: const Text("Register"),
+                    onPressedx: () {
+                      changeScreenReplacement(context, registerForm());
+                    },
                     textColorx: blueColor),
               ],
             )),
