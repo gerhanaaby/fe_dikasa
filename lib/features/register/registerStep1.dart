@@ -140,7 +140,7 @@ class _registerStep1State extends State<registerStep1> {
                               enabledColor: textFormColorGrey,
                             )
                           ],
-                        )),
+                        ),),
                     elevatedBtnApp(
                         childx: const Text("Selanjutnya"),
                         onPressedx: () {},
@@ -157,3 +157,5 @@ class _registerStep1State extends State<registerStep1> {
         ));
   }
 }
+
+

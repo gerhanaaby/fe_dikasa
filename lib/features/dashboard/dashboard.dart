@@ -1,4 +1,5 @@
 import 'package:fe_dikasa/features/dashboard/menu_list.dart';
+import 'package:fe_dikasa/features/dashboard/slide_able_list.dart';
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatefulWidget {
@@ -37,7 +38,9 @@ class _DashboardState extends State<Dashboard> {
             ]),
         Column(
           children: [
-            Container()
+            Container(),
+            SlideAbleList(),
+
           ],
         )
       ],
