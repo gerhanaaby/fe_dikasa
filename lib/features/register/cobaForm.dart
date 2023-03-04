@@ -1,4 +1,4 @@
-import 'package:fe_dikasa/constants/buttons.dart';
+import 'package:fe_dikasa/constants/button.dart';
 import 'package:fe_dikasa/constants/forms.dart';
 import 'package:flutter/material.dart';
 
@@ -14,28 +14,23 @@ class _cobaFormState extends State<cobaForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(50.0),
-            child: Row(
-              children: createButtons(
-                  ['Button 1', 'Button 2', 'Button 3', 'Button 4'],
-                  0,
-                  Colors.grey,
-                  Colors.green,
-                  Colors.black),
-            ),
-          ),
-          Container(
-              padding: EdgeInsets.all(50),
-              child: dropDownFormField(
-                ["Fish", "Elephant", "Duck"],
-                "Select an Options",
-                300,
-                100,
-              )),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(50.0),
+        child: Column(
+          children: [
+            SizedBox(
+                child: buttonGroup(267, 46, 16, Colors.blue, Colors.white,
+                    Colors.white, Colors.grey, ["oke", "mantap", "bos"])),
+            Container(
+                padding: EdgeInsets.all(50),
+                child: dropDownFormField(
+                  ["Fish", "Elephant", "Duck"],
+                  "Select an Options",
+                  300,
+                  100,
+                )),
+          ],
+        ),
       ),
     );
   }

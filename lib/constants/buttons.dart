@@ -127,29 +127,3 @@ Widget textButtonApp(
   );
 }
 
-List<ElevatedButton> createButtons(
-    List<String> buttonTitles,
-    int _selectedButtonIndex,
-    Color backgroundColor,
-    Color disabledTextColorx,
-    Color textColorx) {
-  List<ElevatedButton> buttons = [];
-  for (int i = 0; i < buttonTitles.length; i++) {
-    buttons.add(
-      ElevatedButton(
-        onPressed: () {},
-        style: ButtonStyle(
-          foregroundColor: MaterialStateProperty.resolveWith<Color?>(
-            // text color
-            (Set<MaterialState> states) =>
-                states.contains(MaterialState.disabled)
-                    ? disabledTextColorx
-                    : textColorx,
-          ),
-        ),
-        child: Text(buttonTitles[i]),
-      ),
-    );
-  }
-  return buttons;
-}
