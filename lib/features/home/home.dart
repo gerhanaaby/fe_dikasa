@@ -34,37 +34,39 @@ class _HomeState extends State<Home> {
       page = Login();
     }
     return Scaffold(
-        appBar: AppBar(title: Text("DIKASA")),
-      drawer: Drawer(
-        // Add a ListView to the drawer. This ensures the user can scroll
-        // through the options in the drawer if there isn't enough vertical
-        // space to fit everything.
-        child: SingleChildScrollView(
-          child: ListView(
-            // Important: Remove any padding from the ListView.
-            padding: EdgeInsets.zero,
-            children: [
-              drawerHeader(),
-            ],
+        appBar: AppBar(
+          title: Text("DIKASA"),
+          toolbarHeight: 88,
+        ),
+        drawer: Drawer(
+          // Add a ListView to the drawer. This ensures the user can scroll
+          // through the options in the drawer if there isn't enough vertical
+          // space to fit everything.
+          child: SingleChildScrollView(
+            child: ListView(
+              // Important: Remove any padding from the ListView.
+              padding: EdgeInsets.zero,
+              children: [
+                drawerHeader(),
+              ],
+            ),
           ),
         ),
-      ),
-      endDrawer: Drawer(
-        // Add a ListView to the drawer. This ensures the user can scroll
-        // through the options in the drawer if there isn't enough vertical
-        // space to fit everything.
-        child: SingleChildScrollView(
-          child: ListView(
-            // Important: Remove any padding from the ListView.
-            padding: EdgeInsets.zero,
-            children: [
-              drawerHeader(),
-            ],
+        endDrawer: Drawer(
+          // Add a ListView to the drawer. This ensures the user can scroll
+          // through the options in the drawer if there isn't enough vertical
+          // space to fit everything.
+          child: SingleChildScrollView(
+            child: ListView(
+              // Important: Remove any padding from the ListView.
+              padding: EdgeInsets.zero,
+              children: [
+                drawerHeader(),
+              ],
+            ),
           ),
         ),
-      ),
-      body: page
-    );
+        body: page);
   }
 
   Widget drawerMenu() {
