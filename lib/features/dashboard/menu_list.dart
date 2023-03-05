@@ -4,8 +4,7 @@ import 'package:flutter/material.dart';
 class MenuList extends StatelessWidget {
   final List<Map<String, Object>> listMenu;
 
-const MenuList({Key? key,required this.listMenu})
-      : super(key: key);
+  const MenuList({Key? key, required this.listMenu}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,9 +13,12 @@ const MenuList({Key? key,required this.listMenu})
       shrinkWrap: true,
       crossAxisCount: 3,
       childAspectRatio: (247 / 115),
-      
+      padding: EdgeInsets.fromLTRB(0, 32, 25, 0),
       children: List.generate(listMenu.length, (index) {
-        return SizedBox(
+        return Container(
+          margin: EdgeInsets.fromLTRB(14.5, 0, 14.5, 14),
+          height: 115,
+          width: 247,
           child: Card(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
@@ -57,7 +59,7 @@ const MenuList({Key? key,required this.listMenu})
                       margin: const EdgeInsets.fromLTRB(14, 0, 0, 0),
                       height: 20,
                       width: 112,
-                      child:  Text(
+                      child: Text(
                         'Rp. ${listMenu[index]['price']}',
                         style: poppinsDarkGreyBold(fontSize: 16),
                       ),

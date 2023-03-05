@@ -75,6 +75,12 @@ class _DashboardState extends State<Dashboard> {
       'price': 21000
     },
   ];
+  final listOrder = const [
+    {'qty': 1, 'name': 'Cumi Goreng Asam Manis', 'price': 2.000},
+    {'qty': 20, 'name': 'Cumi Goreng Asam Manis', 'price': 21000},
+    {'qty': 2, 'name': 'Cumi Goreng Asam Manis', 'price': 21000},
+    {'qty': 100, 'name': 'Cumi Goreng Asam Manis', 'price': 21000},
+  ];
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -105,18 +111,61 @@ class _DashboardState extends State<Dashboard> {
                 color: Colors.green,
                 child: const Text("ini group button dan order"),
               ),
-              const SizedBox(
+              SizedBox(
                 width: 451,
                 height: 237,
-                child: SlideAbleList(),
+                child: SlideAbleList(
+                  listOrder: listOrder,
+                ),
               ),
-              const SizedBox(
+              SizedBox(
                 width: 451,
                 height: 42,
-                child: Text('data'),
+                child: Row(
+                  children: [
+                    Column(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.fromLTRB(37, 0, 0, 0),
+                          child: Text('Total Pesanan'),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.fromLTRB(145, 0, 0, 0),
+                          child: Text('data1 deh'),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
-              const SizedBox(width: 451, height: 42, child: Text('data')),
-
+              SizedBox(
+                width: 451,
+                height: 42,
+                child: Row(
+                  children: [
+                    Column(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.fromLTRB(37, 0, 0, 0),
+                          child: Text('Total Harga'),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.fromLTRB(162, 0, 0, 0),
+                          child: Text('data2 deh'),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
               Row(
                 children: [
                   Container(
