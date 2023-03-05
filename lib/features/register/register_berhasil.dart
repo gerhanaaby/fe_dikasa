@@ -4,7 +4,7 @@ import 'package:fe_dikasa/constants/headers.dart';
 import 'package:fe_dikasa/constants/text_styles.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants/imageSide.dart';
+import '../../constants/image_side.dart';
 import '../login/login.dart';
 
 class RegisterSuccess extends StatelessWidget {
