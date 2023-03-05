@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 
 import 'package:fe_dikasa/features/dashboard/dashboard.dart';
 import 'package:fe_dikasa/features/home/home.dart';
 import 'package:fe_dikasa/features/login/login.dart';
 import 'package:fe_dikasa/features/register/registerForm.dart';
 
+=======
+import 'package:fe_dikasa/features/register/cobaForm.dart';
+>>>>>>> origin/josua
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -35,7 +39,11 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
+<<<<<<< HEAD
       home: const Home(),
+=======
+      home: const cobaForm(),
+>>>>>>> origin/josua
     );
   }
 }

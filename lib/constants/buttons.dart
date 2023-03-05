@@ -1,20 +1,17 @@
-
 import 'package:flutter/material.dart';
 
 //Elevated Button
 Widget elevatedBtnApp(
-
     {Color? colorx,
-      double? widthx,
-      double? heightx,
-      required Widget childx,
-      RoundedRectangleBorder? shapex,
-      required Function onPressedx,
-      Key? keyx,
-      Color? disabledColorx,
-      Color? disabledTextColorx,
-      Color? textColorx}) {
-
+    double? widthx,
+    double? heightx,
+    required Widget childx,
+    RoundedRectangleBorder? shapex,
+    required Function onPressedx,
+    Key? keyx,
+    Color? disabledColorx,
+    Color? disabledTextColorx,
+    Color? textColorx}) {
   if (disabledTextColorx == null && disabledColorx == null) {
     disabledTextColorx = colorx;
   }
@@ -49,15 +46,15 @@ Widget elevatedBtnApp(
 //Outline Button
 Widget outlinedBtnApp(
     {Color? colorx,
-      double? widthx,
-      double? heightx,
-      required Widget childx,
-      RoundedRectangleBorder? shapex,
-      required Function onPressedx,
-      Key? keyx,
-      Color? disabledColorx,
-      Color? disabledTextColorx,
-      Color? textColorx}) {
+    double? widthx,
+    double? heightx,
+    required Widget childx,
+    RoundedRectangleBorder? shapex,
+    required Function onPressedx,
+    Key? keyx,
+    Color? disabledColorx,
+    Color? disabledTextColorx,
+    Color? textColorx}) {
   if (disabledTextColorx == null && disabledColorx == null) {
     disabledTextColorx = colorx;
   }
@@ -70,14 +67,17 @@ Widget outlinedBtnApp(
         style: ButtonStyle(
           foregroundColor: MaterialStateProperty.resolveWith<Color?>(
             // text color
-                (Set<MaterialState> states) => states.contains(MaterialState.disabled)
-                ? disabledTextColorx
-                : textColorx,
+            (Set<MaterialState> states) =>
+                states.contains(MaterialState.disabled)
+                    ? disabledTextColorx
+                    : textColorx,
           ),
           backgroundColor: MaterialStateProperty.resolveWith<Color?>(
             // background color
-                (Set<MaterialState> states) =>
-            states.contains(MaterialState.disabled) ? disabledColorx : colorx,
+            (Set<MaterialState> states) =>
+                states.contains(MaterialState.disabled)
+                    ? disabledColorx
+                    : colorx,
           ),
           shape: MaterialStateProperty.all(shapex),
         ),
@@ -86,18 +86,16 @@ Widget outlinedBtnApp(
   );
 }
 
-
 //Text Button
 Widget textButtonApp(
     {Color? colorx,
-      required Widget childx,
-      RoundedRectangleBorder? shapex,
-      required Function onPressedx,
-      Key? keyx,
-      Color? disabledColorx,
-      Color? disabledTextColorx,
-      Color? textColorx}) {
-
+    required Widget childx,
+    RoundedRectangleBorder? shapex,
+    required Function onPressedx,
+    Key? keyx,
+    Color? disabledColorx,
+    Color? disabledTextColorx,
+    Color? textColorx}) {
   if (disabledTextColorx == null && disabledColorx == null) {
     disabledTextColorx = colorx;
   }
@@ -129,4 +127,30 @@ Widget textButtonApp(
   );
 }
 
-
+Widget buttonGroup(
+    double minWidth,
+    double minHeight,
+    double fontSize,
+    Color activeBgColor,
+    Color activeFgColor,
+    Color inactiveBgColor,
+    Color inactiveFgColor,
+    List<String> labels,
+    ) {
+  return SizedBox(
+    child: ToggleSwitch(
+      minWidth: minWidth,
+      minHeight: minHeight,
+      fontSize: fontSize,
+      initialLabelIndex: 1,
+      activeBgColor: activeBgColor,
+      activeFgColor: activeFgColor,
+      inactiveBgColor: inactiveBgColor,
+      inactiveFgColor: inactiveFgColor,
+      labels: labels,
+      onToggle: (index) {
+        print('switched to: $index');
+      },
+    ),
+  );
+}
