@@ -23,12 +23,7 @@ class _cobaFormState extends State<cobaForm> {
                     Colors.white, Colors.grey, ["oke", "mantap", "bos"])),
             Container(
                 padding: EdgeInsets.all(50),
-                child: dropDownFormField(
-                  ["Fish", "Elephant", "Duck"],
-                  "Select an Options",
-                  300,
-                  100,
-                )),
+                child: dropDownFormField(dropDownValue: ["ewe", "ewe", "ewe"]))
           ],
         ),
       ),

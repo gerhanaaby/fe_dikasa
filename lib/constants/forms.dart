@@ -1,3 +1,4 @@
+import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 
@@ -92,46 +93,50 @@ Widget otpFormField({
   );
 }
 
-Widget dropDownFormField(
-  List<String> dropDownValue,
-  String labelText,
-  double width,
-  double height,
-) {
+Widget dropDownFormField({
+  required List<String> dropDownValue,
+  double? buttonWidth,
+  double? buttonHeight,
+  double? menuHeight,
+  double? fontSize,
+  Color? colorFont,
+  String? labelHint,
+}) {
+  labelHint ?? (labelHint = "Select Item");
+  fontSize ?? (fontSize = 14);
+  buttonWidth ?? (buttonWidth = 140);
+  buttonHeight ?? (buttonHeight = 40);
+  menuHeight ?? (menuHeight = 40);
   return SizedBox(
-    width: width,
-    height: height,
-    child: DropdownButtonFormField(
-      decoration: InputDecoration(
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
+    child: DropdownButtonHideUnderline(
+      child: DropdownButton2(
+        hint: Text(
+          labelHint,
+          style: TextStyle(
+            fontSize: fontSize,
+            color: Colors.grey,
+          ),
         ),
-        filled: true,
-        fillColor: Colors.white,
-        labelText: labelText,
-        labelStyle: TextStyle(
-          color: Colors.grey[700],
-          fontSize: 16,
-          fontWeight: FontWeight.bold,
+        items: dropDownValue
+            .map((item) => DropdownMenuItem<String>(
+                  value: item,
+                  child: Text(
+                    item,
+                    style: const TextStyle(
+                      fontSize: 14,
+                    ),
+                  ),
+                ))
+            .toList(),
+        onChanged: (value) {},
+        buttonStyleData: const ButtonStyleData(
+          height: 40,
+          width: 140,
+        ),
+        menuItemStyleData: const MenuItemStyleData(
+          height: 40,
         ),
       ),
-      items: dropDownValue.map((String value) {
-        return DropdownMenuItem(
-          value: value,
-          child: Row(
-            children: [
-              // Image.asset(
-              //   'assets/images/logo.png',
-              //   width: 24,
-              //   height: 24,
-              // ),
-              SizedBox(width: 10),
-              Text(value),
-            ],
-          ),
-        );
-      }).toList(),
-      onChanged: (String? value) {},
     ),
   );
 }
