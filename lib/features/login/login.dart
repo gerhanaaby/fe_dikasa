@@ -2,7 +2,7 @@ import 'package:fe_dikasa/constants/buttons.dart';
 import 'package:fe_dikasa/constants/colors.dart';
 import 'package:fe_dikasa/constants/forms.dart';
 import 'package:fe_dikasa/constants/headers.dart';
-import 'package:fe_dikasa/constants/imageSide.dart';
+import 'package:fe_dikasa/constants/image_side.dart';
 import 'package:fe_dikasa/constants/text_styles.dart';
 import 'package:fe_dikasa/features/register/registerForm.dart';
 import 'package:fe_dikasa/utils/change_screen.dart';

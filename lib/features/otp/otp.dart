@@ -1,4 +1,4 @@
-import 'package:fe_dikasa/constants/imageSide.dart';
+import 'package:fe_dikasa/constants/image_side.dart';
 import 'package:flutter/material.dart';
 
 import 'package:fe_dikasa/constants/buttons.dart';
