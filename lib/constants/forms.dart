@@ -140,3 +140,52 @@ Widget dropDownFormField({
     ),
   );
 }
+
+Widget searchBar({
+  suggestions,
+  labelText,
+}) {
+  return SizedBox(
+    height: 300,
+    width: 300,
+    child: Padding(
+      padding: const EdgeInsets.all(10),
+      child: Column(
+        children: [
+          TextField(
+            // onChanged: (value) => _runFilter(value),
+            decoration: const InputDecoration(
+              prefixIcon: Icon(Icons.search),
+              labelText: 'Cari Nama Produk',
+            ),
+          ),
+          Expanded(
+            child: suggestions.isNotEmpty
+                ? ListView.builder(
+                    itemCount: suggestions.length,
+                    itemBuilder: (context, index) => Card(
+                      key: ValueKey(suggestions[index]["id"]),
+                      color: Colors.amberAccent,
+                      elevation: 4,
+                      margin: const EdgeInsets.symmetric(vertical: 10),
+                      child: ListTile(
+                        leading: Text(
+                          suggestions[index]["id"].toString(),
+                          style: const TextStyle(fontSize: 24),
+                        ),
+                        title: Text(suggestions[index]['name']),
+                        subtitle: Text(
+                            '${suggestions[index]["age"].toString()} years old'),
+                      ),
+                    ),
+                  )
+                : const Text(
+                    'No results found',
+                    style: TextStyle(fontSize: 24),
+                  ),
+          ),
+        ],
+      ),
+    ),
+  );
+}

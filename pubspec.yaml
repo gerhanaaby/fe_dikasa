@@ -38,6 +38,8 @@ dependencies:
   flutter_otp_text_field: ^1.1.1
   toggle_switch: "^0.1.9"
   dropdown_button2: ^2.0.0
+  searchable_listview: ^2.2.2
+
 
 dev_dependencies:
   flutter_test:
