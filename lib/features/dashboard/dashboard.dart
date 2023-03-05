@@ -10,49 +10,73 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
-  final List<String> listImage = [
-    'assets/images/register_img.png',
-    'assets/images/register_img.png',
-    'assets/images/register_img.png',
-    'assets/images/register_img.png',
-    'assets/images/register_img.png',
-  ];
-  final List<String> menus = ['ichigo', 'niigo', 'sango', 'yongo', 'hakko'];
-  final List<String> prices = [
-    '(021)678392',
-    '(021)678334',
-    '(021)672414',
-    '(021)678390',
-    '(021)679992'
+  final listMenu = const [
+    {
+      'image': 'assets/images/register_img.png',
+      'name': 'Cumi Goreng Asam Manis',
+      'price': 21000
+    },
+    {
+      'image': 'assets/images/logo.png',
+      'name': 'Cumi Goreng Asam Manis',
+      'price': 21000
+    },
+    {
+      'image': 'assets/images/register_img.png',
+      'name': 'Cumi Goreng Asam Manis',
+      'price': 2.000
+    },
+    {
+      'image': 'assets/images/register_img.png',
+      'name': 'Cumi Goreng Asam Manis',
+      'price': 21000
+    },
+    {
+      'image': 'assets/images/dikasa_logo_auth.png',
+      'name': 'Cumi Goreng Asam Manis',
+      'price': 21000
+    },
+    {
+      'image': 'assets/images/register_img.png',
+      'name': 'Cumi Goreng Asam Manis',
+      'price': 21000
+    },
   ];
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(
-          flex: 7,
-          child: Column(
-              children: [
-                Container(width: 50, height: 50, child: Text("ini group button dan search"),color: Colors.black,),
-                SizedBox(
-                  width: 800,
-                  height: 50,
-                  child: MenuList(
-                    images: listImage,
-                    menus: menus,
-                    prices: prices,),
-                )
-              ]),
+        SizedBox(
+          child: Column(children: [
+            Container(
+              width: 889,
+              height: 161,
+              color: Colors.yellow,
+              child: Text("ini group button dan search"),
+            ),
+            SizedBox(
+              width: 889,
+              height: 478,
+              child: MenuList(
+                listMenu: listMenu,
+              ),
+            )
+          ]),
         ),
-        Expanded(
-          flex: 3,
+        SizedBox(
           child: Column(
             children: [
-              Container(width: 50, height: 50, child: Text("ini group button dan order"),color: Colors.black,),
-              SizedBox(
-                width: 500,
-                  height: 150,
-                  child: SlideAbleList()),
+              Container(
+                width: 451,
+                height: 161,
+                color: Colors.green,
+                child: const Text("ini group button dan order"),
+              ),
+              const SizedBox(
+                width: 451,
+                height: 283,
+                child: SlideAbleList(),
+              ),
             ],
           ),
         )
