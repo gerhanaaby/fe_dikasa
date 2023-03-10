@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toggle_switch/toggle_switch.dart';
 
 //Elevated Button
 Widget elevatedBtnApp(
@@ -127,3 +128,30 @@ Widget textButtonApp(
   );
 }
 
+Widget buttonGroup(
+    double minWidth,
+    double minHeight,
+    double fontSize,
+    Color activeBgColor,
+    Color activeFgColor,
+    Color inactiveBgColor,
+    Color inactiveFgColor,
+    List<String> labels,
+    ) {
+  return SizedBox(
+    child: ToggleSwitch(
+      minWidth: minWidth,
+      minHeight: minHeight,
+      fontSize: fontSize,
+      initialLabelIndex: 1,
+      activeBgColor: activeBgColor,
+      activeFgColor: activeFgColor,
+      inactiveBgColor: inactiveBgColor,
+      inactiveFgColor: inactiveFgColor,
+      labels: labels,
+      onToggle: (index) {
+        print('switched to: $index');
+      },
+    ),
+  );
+}

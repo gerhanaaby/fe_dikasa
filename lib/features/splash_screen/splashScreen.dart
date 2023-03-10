@@ -5,7 +5,7 @@ import 'package:fe_dikasa/constants/text_styles.dart';
 import 'package:flutter/material.dart';
 
 import '../../utils/change_screen.dart';
-import '../register/registerBerhasil.dart';
+import '../register/register_berhasil.dart';
 
 class Splash extends StatelessWidget {
   const Splash({Key? key}) : super(key: key);

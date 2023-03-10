@@ -1,3 +1,4 @@
+import 'package:fe_dikasa/features/dashboard/dashboard.dart';
 import 'package:fe_dikasa/features/login/login.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     if (currentPage == 1) {
-      page = Login();
+      page = Dashboard();
     } else if (currentPage == 2) {
       page = Login();
     } else if (currentPage == 3) {
@@ -33,36 +34,39 @@ class _HomeState extends State<Home> {
       page = Login();
     }
     return Scaffold(
-      drawer: Drawer(
-        // Add a ListView to the drawer. This ensures the user can scroll
-        // through the options in the drawer if there isn't enough vertical
-        // space to fit everything.
-        child: SingleChildScrollView(
-          child: ListView(
-            // Important: Remove any padding from the ListView.
-            padding: EdgeInsets.zero,
-            children: [
-              drawerHeader(),
-            ],
+        appBar: AppBar(
+          title: Text("DIKASA"),
+          toolbarHeight: 88,
+        ),
+        drawer: Drawer(
+          // Add a ListView to the drawer. This ensures the user can scroll
+          // through the options in the drawer if there isn't enough vertical
+          // space to fit everything.
+          child: SingleChildScrollView(
+            child: ListView(
+              // Important: Remove any padding from the ListView.
+              padding: EdgeInsets.zero,
+              children: [
+                drawerHeader(),
+              ],
+            ),
           ),
         ),
-      ),
-      endDrawer: Drawer(
-        // Add a ListView to the drawer. This ensures the user can scroll
-        // through the options in the drawer if there isn't enough vertical
-        // space to fit everything.
-        child: SingleChildScrollView(
-          child: ListView(
-            // Important: Remove any padding from the ListView.
-            padding: EdgeInsets.zero,
-            children: [
-              drawerHeader(),
-            ],
+        endDrawer: Drawer(
+          // Add a ListView to the drawer. This ensures the user can scroll
+          // through the options in the drawer if there isn't enough vertical
+          // space to fit everything.
+          child: SingleChildScrollView(
+            child: ListView(
+              // Important: Remove any padding from the ListView.
+              padding: EdgeInsets.zero,
+              children: [
+                drawerHeader(),
+              ],
+            ),
           ),
         ),
-      ),
-      body: page,
-    );
+        body: page);
   }
 
   Widget drawerMenu() {

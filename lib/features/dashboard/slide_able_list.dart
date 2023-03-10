@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 class SlideAbleList extends StatefulWidget {
-  final List<String>? images;
+  final List<Map<String, Object>> listOrder;
 
-  const SlideAbleList({Key? key, this.images}) : super(key: key);
+  const SlideAbleList({Key? key, required this.listOrder}) : super(key: key);
 
   @override
-  State<SlideAbleList> createState() => _SlideAbleListState();
+  State<SlideAbleList> createState() {
+    return _SlideAbleListState();
+  } 
 }
 
 class _SlideAbleListState extends State<SlideAbleList> {
@@ -15,7 +17,9 @@ class _SlideAbleListState extends State<SlideAbleList> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: widget.images?.length,
+      shrinkWrap: true,
+      scrollDirection: Axis.vertical,
+      itemCount: widget.listOrder.length,
       itemBuilder: (BuildContext context, int index) {
         return Dismissible(
           direction: DismissDirection.startToEnd,
