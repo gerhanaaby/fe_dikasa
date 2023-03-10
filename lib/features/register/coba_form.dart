@@ -1,6 +1,6 @@
-import 'package:fe_dikasa/constants/buttons.dart';
-import 'package:fe_dikasa/constants/forms.dart';
 import 'package:flutter/material.dart';
+
+import '../../constants/forms.dart';
 
 class cobaForm extends StatefulWidget {
   const cobaForm({super.key});
@@ -53,10 +53,28 @@ class _cobaFormState extends State<cobaForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SizedBox(
-          child: searchBar(
-        suggestions: _allUsers,
-      )),
+      body: Column(
+        children: [
+          searchBar(
+            suggestions: _allUsers,
+            enableBorderColor: Colors.grey,
+            focusedBorderColor: Colors.grey,
+            labelText: "Cari Nama Produk",
+          ),
+          // SizedBox(
+          //     height: 400,
+          //     width: 400,
+          //     child: SimpleCalculator(
+          //       theme: const CalculatorThemeData(
+          //         displayColor: Colors.white,
+          //         displayStyle:
+          //             const TextStyle(fontSize: 80, color: Colors.blue),
+
+          //         /*...*/
+          //       ),
+          //     )),
+        ],
+      ),
     );
   }
 }

@@ -143,20 +143,35 @@ Widget dropDownFormField({
 
 Widget searchBar({
   suggestions,
-  labelText,
+  String? labelText,
+  required Color enableBorderColor,
+  required Color focusedBorderColor,
 }) {
   return SizedBox(
     height: 300,
     width: 300,
     child: Padding(
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(30),
       child: Column(
         children: [
           TextField(
             // onChanged: (value) => _runFilter(value),
-            decoration: const InputDecoration(
+            decoration: InputDecoration(
               prefixIcon: Icon(Icons.search),
-              labelText: 'Cari Nama Produk',
+              labelText: labelText,
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10.0),
+                borderSide: BorderSide(
+                  color: enableBorderColor,
+                  width: 2.0,
+                ),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10.0),
+                borderSide: BorderSide(
+                  color: focusedBorderColor,
+                ),
+              ),
             ),
           ),
           Expanded(
