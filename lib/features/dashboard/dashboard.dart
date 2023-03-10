@@ -1,4 +1,5 @@
 import 'package:fe_dikasa/constants/buttons.dart';
+import 'package:fe_dikasa/constants/list.dart';
 import 'package:fe_dikasa/features/dashboard/menu_list.dart';
 import 'package:fe_dikasa/features/dashboard/slide_able_list.dart';
 import 'package:flutter/material.dart';
@@ -74,13 +75,34 @@ class _DashboardState extends State<Dashboard> {
       'name': 'Cumi Goreng Asam Manis',
       'price': 21000
     },
+    {
+      'image': 'assets/images/register_img.png',
+      'name': 'Cumi Goreng Asam Manis',
+      'price': 21000
+    },
+    {
+      'image': 'assets/images/dikasa_logo_auth.png',
+      'name': 'Cumi Goreng Asam Manis',
+      'price': 21000
+    },
+    {
+      'image': 'assets/images/register_img.png',
+      'name': 'Cumi Goreng Asam Manis',
+      'price': 21000
+    },
   ];
   final listOrder = const [
-    {'qty': 1, 'name': 'Cumi Goreng Asam Manis', 'price': 2.000},
+    {'qty': 1, 'name': 'Cumi Goreng Asam Manis', 'price': 20000},
     {'qty': 20, 'name': 'Cumi Goreng Asam Manis', 'price': 21000},
     {'qty': 2, 'name': 'Cumi Goreng Asam Manis', 'price': 21000},
     {'qty': 100, 'name': 'Cumi Goreng Asam Manis', 'price': 21000},
+    {'qty': 100, 'name': 'Cumi Goreng Asam Manis', 'price': 21000},
+    {'qty': 100, 'name': 'Cumi Goreng Asam Manis', 'price': 21000},
+    {'qty': 100, 'name': 'Cumi Goreng Asam Manis', 'price': 21000},
   ];
+
+  final labels = const["Makanan", "Minuman", "Tambahan"];
+  final labels2 = const["OrderBaru", "Daftar Order"];
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -88,10 +110,14 @@ class _DashboardState extends State<Dashboard> {
         SizedBox(
           child: Column(children: [
             Container(
+              color: textFormColorDarkGrey,
               width: 889,
               height: 161,
-              color: Colors.yellow,
-              child: Text("ini group button dan search"),
+              child: Container(
+                margin: EdgeInsets.fromLTRB(43, 0, 43, 0),
+                child: buttonGroup(267, 46, 20, blueColor,
+                    whiteColor, bgTextFromGrey, textFormColorGrey, labels),
+              ),
             ),
             SizedBox(
               width: 889,
@@ -108,8 +134,12 @@ class _DashboardState extends State<Dashboard> {
               Container(
                 width: 451,
                 height: 161,
-                color: Colors.green,
-                child: const Text("ini group button dan order"),
+                color: textFormColorGrey,
+                child: Container(
+                  margin: EdgeInsets.fromLTRB(31, 0, 31, 0),
+                  child: buttonGroup(194, 46, 20, blueColor,
+                    whiteColor, bgTextFromGrey, textFormColorGrey, labels2),
+                ),
               ),
               SizedBox(
                 width: 451,
@@ -118,54 +148,8 @@ class _DashboardState extends State<Dashboard> {
                   listOrder: listOrder,
                 ),
               ),
-              SizedBox(
-                width: 451,
-                height: 42,
-                child: Row(
-                  children: [
-                    Column(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.fromLTRB(37, 0, 0, 0),
-                          child: Text('Total Pesanan'),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.fromLTRB(145, 0, 0, 0),
-                          child: Text('data1 deh'),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                width: 451,
-                height: 42,
-                child: Row(
-                  children: [
-                    Column(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.fromLTRB(37, 0, 0, 0),
-                          child: Text('Total Harga'),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.fromLTRB(162, 0, 0, 0),
-                          child: Text('data2 deh'),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
+              listTotalPrice(42, 451, 'Total Pesanan', '69'),
+              listTotalPrice(42, 451, 'Total Harga', '200.000'),  
               Row(
                 children: [
                   Container(
