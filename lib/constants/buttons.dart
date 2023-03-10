@@ -129,15 +129,15 @@ Widget textButtonApp(
 }
 
 Widget buttonGroup(
-    double minWidth,
-    double minHeight,
-    double fontSize,
-    Color activeBgColor,
-    Color activeFgColor,
-    Color inactiveBgColor,
-    Color inactiveFgColor,
-    List<String> labels,
-    ) {
+  double minWidth,
+  double minHeight,
+  double fontSize,
+  Color activeBgColor,
+  Color activeFgColor,
+  Color inactiveBgColor,
+  Color inactiveFgColor,
+  List<String> labels,
+) {
   return SizedBox(
     child: ToggleSwitch(
       minWidth: minWidth,
@@ -152,6 +152,38 @@ Widget buttonGroup(
       onToggle: (index) {
         print('switched to: $index');
       },
+    ),
+  );
+}
+
+Widget ButtonCalculator({
+  color,
+  textColor,
+  buttonText,
+  buttontapped,
+}) {
+  return GestureDetector(
+    onTap: buttontapped,
+    child: Padding(
+      padding: const EdgeInsets.all(10),
+      child: ClipRRect(
+        // borderRadius: BorderRadius.circular(25),
+        child: Container(
+          decoration: BoxDecoration(
+              color: Colors.grey, borderRadius: BorderRadius.circular(15)),
+          color: color,
+          child: Center(
+            child: Text(
+              buttonText,
+              style: TextStyle(
+                color: textColor,
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ),
+      ),
     ),
   );
 }

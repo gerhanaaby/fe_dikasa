@@ -1,6 +1,5 @@
+import 'package:fe_dikasa/constants/buttons.dart';
 import 'package:flutter/material.dart';
-
-import '../../constants/forms.dart';
 
 class cobaForm extends StatefulWidget {
   const cobaForm({super.key});
@@ -22,8 +21,24 @@ class _cobaFormState extends State<cobaForm> {
     {"id": 9, "name": "Caversky", "age": 100},
     {"id": 10, "name": "Becky", "age": 32},
   ];
-  List<Map<String, dynamic>> _foundUsers = [];
 
+  final List<String> buttons = [
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    'C',
+    '0',
+    ' ',
+  ];
+  List<Map<String, dynamic>> _foundUsers = [];
+  var userInput = '';
+  var answer = '';
   @override
   initState() {
     // at the beginning, all users are shown
@@ -53,27 +68,75 @@ class _cobaFormState extends State<cobaForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          searchBar(
-            suggestions: _allUsers,
-            enableBorderColor: Colors.grey,
-            focusedBorderColor: Colors.grey,
-            labelText: "Cari Nama Produk",
-          ),
-          // SizedBox(
-          //     height: 400,
-          //     width: 400,
-          //     child: SimpleCalculator(
-          //       theme: const CalculatorThemeData(
-          //         displayColor: Colors.white,
-          //         displayStyle:
-          //             const TextStyle(fontSize: 80, color: Colors.blue),
-
-          //         /*...*/
-          //       ),
-          //     )),
-        ],
+      appBar: new AppBar(
+        title: new Text("Calculator"),
+      ), //AppBar
+      body: Container(
+        width: 300,
+        height: 800,
+        child: Column(
+          children: <Widget>[
+            Expanded(
+              child: Container(
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
+                      Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.blue, width: 5),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        alignment: Alignment.centerRight,
+                        child: Text(
+                          userInput,
+                          style: TextStyle(
+                              fontSize: 30,
+                              color: Colors.blue,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      )
+                    ]),
+              ),
+            ),
+            Expanded(
+              flex: 3,
+              child: Container(
+                child: GridView.builder(
+                    itemCount: buttons.length,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 3),
+                    itemBuilder: (BuildContext context, int index) {
+                      // Clear Button
+                      // Equal_to Button
+                      if (index == 9) {
+                        return ButtonCalculator(
+                          buttontapped: () {
+                            setState(() {
+                              userInput = '';
+                              answer = '0';
+                            });
+                          },
+                          buttonText: buttons[index],
+                          textColor: Colors.black,
+                        );
+                      }
+                      //  other buttons
+                      else {
+                        return ButtonCalculator(
+                          buttontapped: () {
+                            setState(() {
+                              userInput += buttons[index];
+                            });
+                          },
+                          buttonText: buttons[index],
+                          textColor: Colors.black,
+                        );
+                      }
+                    }), // GridView.builder
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
