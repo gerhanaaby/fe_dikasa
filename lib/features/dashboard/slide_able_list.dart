@@ -56,10 +56,14 @@ class _SlideAbleListState extends State<SlideAbleList> {
               // secondaryBackground: ...,
               child: ListTile(
                 leading: Text('${widget.listOrder[index]['qty']}'),
-                title: Text(
-                  '${widget.listOrder[index]['name']}',
-                ),
 
+                title: SizedBox(
+                  width: 138,
+                  height: 42,
+                  child: Text(
+                    '${widget.listOrder[index]['name']}', style: poppinsGreyNormal(fontSize: 16),
+                  ),
+                ),
                 trailing: Text(
                   '${widget.listOrder[index]['price']}',
                 ),
