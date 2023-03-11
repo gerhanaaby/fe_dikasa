@@ -1,6 +1,7 @@
 import 'package:fe_dikasa/constants/buttons.dart';
 import 'package:fe_dikasa/constants/forms.dart';
 import 'package:fe_dikasa/constants/list.dart';
+import 'package:fe_dikasa/constants/text_styles.dart';
 import 'package:fe_dikasa/features/dashboard/menu_list.dart';
 import 'package:fe_dikasa/features/dashboard/slide_able_list.dart';
 import 'package:flutter/material.dart';
@@ -185,8 +186,8 @@ class _DashboardState extends State<Dashboard> {
                   listOrder: listOrder,
                 ),
               ),
-              listTotalPrice(42, 451, 'Total Pesanan', '69 Produk'),
-              listTotalPrice(42, 451, 'Total Harga', '200.000'),
+              listTotalPrice(42, 451, 'Total Pesanan', '69 Produk',greyBgListTotalPesanan,poppinsDarkGreyBold(fontSize: 16),poppinsDarkGreyBold(fontSize: 16)),
+              listTotalPrice(42, 451, 'Total Harga', '200.000', greyBgListTotalPesanan,poppinsDarkGreyBold(fontSize: 16),poppinsDarkGreyBold(fontSize: 16)),
               Container(
                 margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
                 child: Row(

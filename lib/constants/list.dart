@@ -7,30 +7,31 @@ Widget listTotalPrice(
   double? width,
   String text1,
   String text2,
+  Color bgColor,
+  TextStyle textStyle1,
+  TextStyle textStylePrice,
 ) {
   return Container(
     width: width,
     height: height,
-    color: greyBgListTotalPesanan,
+    color: bgColor,
     child: Row(
       children: [
-        Column(
-          children: [
-            Container(
-              width: 180,
-              height: 24,
-              margin: EdgeInsets.fromLTRB(37, 10, 110, 0),
-              child: Text(text1, style: poppinsDarkGreyBold(fontSize: 16),),
-            ),
-          ],
+        Container(
+          margin: EdgeInsets.fromLTRB(31, 0, 0, 0),
+          child: Text(
+            text1,
+            style: textStyle1,
+          ),
         ),
-        Column(
-          children: [
-            Container(
-              margin: EdgeInsets.fromLTRB(0, 8, 44, 10),
-              child: Text(text2, style: poppinsDarkGreyBold(fontSize: 16), textAlign: TextAlign.right,),
-            ),
-          ],
+        Spacer(),
+        Container(
+          margin: EdgeInsets.fromLTRB(0, 0, 40, 0),
+          child: Text(
+            text2,
+            style: textStylePrice,
+            textAlign: TextAlign.right,
+          ),
         ),
       ],
     ),
