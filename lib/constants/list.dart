@@ -11,22 +11,24 @@ Widget listTotalPrice(
   return Container(
     width: width,
     height: height,
-    color: textFormColorGrey,
+    color: greyBgListTotalPesanan,
     child: Row(
       children: [
         Column(
           children: [
             Container(
-              margin: EdgeInsets.fromLTRB(37, 10, 0, 8),
-              child: Text(text1, style: poppinsGreyNormal(fontSize: 16),),
+              width: 180,
+              height: 24,
+              margin: EdgeInsets.fromLTRB(37, 10, 110, 0),
+              child: Text(text1, style: poppinsDarkGreyBold(fontSize: 16),),
             ),
           ],
         ),
         Column(
           children: [
             Container(
-              margin: EdgeInsets.fromLTRB(162, 8, 44, 10),
-              child: Text(text2, style: poppinsGreyNormal(fontSize: 16),),
+              margin: EdgeInsets.fromLTRB(0, 8, 44, 10),
+              child: Text(text2, style: poppinsDarkGreyBold(fontSize: 16), textAlign: TextAlign.right,),
             ),
           ],
         ),

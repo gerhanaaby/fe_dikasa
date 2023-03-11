@@ -61,7 +61,7 @@ class _SlideAbleListState extends State<SlideAbleList> {
                   width: 138,
                   height: 42,
                   child: Text(
-                    '${widget.listOrder[index]['name']}', style: poppinsGreyNormal(fontSize: 16),
+                    '${widget.listOrder[index]['name']}', style: poppinsDarkGreyBold(fontSize: 16),
                   ),
                 ),
                 trailing: Text(

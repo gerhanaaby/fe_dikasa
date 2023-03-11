@@ -111,20 +111,32 @@ class _DashboardState extends State<Dashboard> {
         SizedBox(
           child: Column(children: [
             Container(
-              color: textFormColorDarkGrey,
+              color: blueBgHeaderPembayaranStage1,
               width: 889,
               height: 161,
               child: Column(
                 children: [
                   Container(
+                    margin: EdgeInsets.fromLTRB(0, 25 , 0, 0),
                     child: Container(
                       margin: EdgeInsets.fromLTRB(43, 0, 43, 0),
                       child: buttonGroup(267, 46, 20, blueColor, whiteColor,
                           bgTextFromGrey, textFormColorGrey, labels),
                     ),
                   ),
-                  Container(
-                    child: dropDownFormField(dropDownValue: labels),
+                  Row(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.fromLTRB(43, 19, 24, 0),
+                        color: whiteColor,
+                        height: 46,
+                        width: 268,
+                        child: dropDownFormField(dropDownValue: labels),
+                      ),
+                      Container(
+                        
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -142,16 +154,31 @@ class _DashboardState extends State<Dashboard> {
           child: Column(
             children: [
               Container(
+                color: blueBgHeaderPembayaranStage2,
                 width: 451,
                 height: 161,
-                color: textFormColorGrey,
-                child: Container(
-                  margin: EdgeInsets.fromLTRB(31, 0, 31, 0),
-                  child: buttonGroup(194, 46, 20, blueColor, whiteColor,
-                      bgTextFromGrey, textFormColorGrey, labels2),
+                child: Column(
+                  children: [
+                    Container(
+                      color: whiteColor,
+                        height: 46,
+                        width: 387,
+                        margin: EdgeInsets.fromLTRB(0, 25, 0, 0),
+                      child: dropDownFormField(dropDownValue: labels),
+                    ),
+                    Container(
+                      color: textFormColorGrey,
+                      child: Container(
+                        margin: EdgeInsets.fromLTRB(31, 19, 31, 0),
+                        child: buttonGroup(194, 46, 20, blueColor, whiteColor,
+                            bgTextFromGrey, textFormColorGrey, labels2),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              SizedBox(
+              Container(
+                color: greyBgListListOrder,
                 width: 451,
                 height: 237,
                 child: SlideAbleList(
@@ -169,7 +196,7 @@ class _DashboardState extends State<Dashboard> {
                       child: outlinedBtnApp(
                           childx: const Text("Hapus"),
                           onPressedx: () {},
-                          // colorx: originalOrangeAccentColor,
+                          colorx: whiteColor,
                           widthx: 186,
                           heightx: 57,
                           textColorx: Colors.red),
